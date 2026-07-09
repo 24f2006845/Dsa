@@ -1,6 +1,10 @@
-import os
+import json
+import re
 import shutil
 import subprocess
+from datetime import date, datetime, timedelta
+from pathlib import Path
+
 
 TOPICS = {
     "1": "01_Basics",
@@ -19,67 +23,326 @@ TOPICS = {
     "14": "14_Heap",
     "15": "15_Graph",
     "16": "16_DP",
-    "17": "17_Trie"
+    "17": "17_Trie",
 }
 
-print("\n====== DSA Upload Tool ======\n")
+DIFFICULTIES = {
+    "1": "Easy",
+    "2": "Medium",
+    "3": "Hard",
+}
 
-print("Topics:")
-for k, v in TOPICS.items():
-    print(f"{k}. {v}")
+PROGRESS_FILE = Path(".dsa_progress.json")
+README_FILE = Path("README.md")
+SOLUTION_FILE = Path("solution.py")
 
-topic = input("\nChoose Topic Number: ").strip()
+PATTERN_MATCHERS = {
+    "Two Pointers": ["two pointer", "two-pointer", "left", "right", "l =", "r ="],
+    "Sliding Window": ["window", "sliding", "left", "right"],
+    "Binary Search": ["binary search", "mid", "low", "high"],
+    "Prefix Sum": ["prefix", "cumulative", "running sum"],
+    "Hashing": ["hash", "dict", "set(", "map", "frequency", "counter"],
+    "Sorting": ["sort", "sorted"],
+    "Stack": ["stack", "append", "pop"],
+    "Queue": ["queue", "deque", "popleft"],
+    "Recursion": ["recursion", "recursive", "dfs", "backtrack"],
+    "Dynamic Programming": ["dp", "memo", "tabulation"],
+    "Greedy": ["greedy"],
+    "Graph Traversal": ["graph", "bfs", "dfs", "visited", "adj"],
+    "Tree Traversal": ["tree", "root", "inorder", "preorder", "postorder"],
+    "Bit Manipulation": ["bit", "xor", "&", "|", "<<", ">>"],
+    "String Matching": ["substring", "pattern", "kmp", "match"],
+    "Math": ["digit", "mod", "%", "gcd", "prime"],
+}
 
-if topic not in TOPICS:
-    print("Invalid Topic")
-    exit()
 
-difficulty = ""
+def slugify_problem_name(problem):
+    cleaned = re.sub(r"[^A-Za-z0-9]+", "_", problem.strip())
+    cleaned = re.sub(r"_+", "_", cleaned).strip("_")
+    return cleaned or "Untitled_Problem"
 
-if topic == "3":
-    print("\nDifficulty")
-    print("1. Easy")
-    print("2. Medium")
-    print("3. Hard")
 
-    d = input("Choose: ").strip()
+def display_topic(topic_dir):
+    return topic_dir.split("_", 1)[1].replace("_", " ")
 
-    diff_map = {
-        "1": "Easy",
-        "2": "Medium",
-        "3": "Hard"
+
+def detect_patterns(problem, topic_dir, code):
+    search_text = f"{problem} {topic_dir} {code}".lower()
+    matches = []
+
+    for pattern, hints in PATTERN_MATCHERS.items():
+        if any(hint.lower() in search_text for hint in hints):
+            matches.append(pattern)
+
+    topic_name = display_topic(topic_dir)
+    topic_pattern_map = {
+        "Binary Search": "Binary Search",
+        "Sliding Window": "Sliding Window",
+        "Greedy": "Greedy",
+        "Graph": "Graph Traversal",
+        "DP": "Dynamic Programming",
+        "Bit Manipulation": "Bit Manipulation",
+        "Strings": "String Matching",
+        "Sorting": "Sorting",
+        "Stacks Queues": "Stack",
+        "Binary Trees": "Tree Traversal",
+        "BST": "Tree Traversal",
     }
 
-    difficulty = diff_map.get(d, "")
+    topic_pattern = topic_pattern_map.get(topic_name)
+    if topic_pattern and topic_pattern not in matches:
+        matches.insert(0, topic_pattern)
 
-problem = input("\nProblem Name: ").strip()
+    return matches or ["General Problem Solving"]
 
-filename = problem.replace(" ", "_") + ".py"
 
-if topic == "3":
-    destination = os.path.join(
-        TOPICS[topic],
-        difficulty,
-        filename
+def revision_due_date(revision_count):
+    intervals = [1, 3, 7, 14, 30]
+    days = intervals[min(revision_count, len(intervals) - 1)]
+    return date.today() + timedelta(days=days)
+
+
+def load_progress():
+    if not PROGRESS_FILE.exists():
+        return {"problems": []}
+
+    with PROGRESS_FILE.open("r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def save_progress(progress):
+    with PROGRESS_FILE.open("w", encoding="utf-8") as file:
+        json.dump(progress, file, indent=2)
+        file.write("\n")
+
+
+def upsert_problem(progress, problem_data):
+    for existing in progress["problems"]:
+        if existing["path"] == problem_data["path"]:
+            existing.update(problem_data)
+            existing["revision_count"] = existing.get("revision_count", 0) + 1
+            existing["revision_due"] = revision_due_date(existing["revision_count"]).isoformat()
+            return existing, True
+
+    problem_data["revision_count"] = 0
+    problem_data["revision_due"] = revision_due_date(0).isoformat()
+    progress["problems"].append(problem_data)
+    return problem_data, False
+
+
+def markdown_link(path):
+    return path.replace(" ", "%20")
+
+
+def progress_bar(done, total, width=20):
+    if total == 0:
+        return "`[--------------------] 0%`"
+
+    filled = round((done / total) * width)
+    bar = "#" * filled + "-" * (width - filled)
+    percent = round((done / total) * 100)
+    return f"`[{bar}] {percent}%`"
+
+
+def count_by_key(items, key):
+    counts = {}
+    for item in items:
+        value = item.get(key) or "Not Set"
+        counts[value] = counts.get(value, 0) + 1
+    return counts
+
+
+def readme_table(rows, empty_message):
+    if not rows:
+        return empty_message
+    return "\n".join(rows)
+
+
+def build_readme(progress):
+    problems = sorted(
+        progress["problems"],
+        key=lambda item: (item.get("updated_at", ""), item.get("problem", "")),
+        reverse=True,
     )
-else:
-    destination = os.path.join(
-        TOPICS[topic],
-        filename
+    total = len(problems)
+    today = date.today()
+
+    topic_counts = count_by_key(problems, "topic")
+    difficulty_counts = count_by_key(problems, "difficulty")
+    pattern_counts = {}
+    for problem in problems:
+        for pattern in problem.get("patterns", []):
+            pattern_counts[pattern] = pattern_counts.get(pattern, 0) + 1
+
+    revision_items = sorted(
+        problems,
+        key=lambda item: item.get("revision_due", "9999-12-31"),
     )
 
-if not os.path.exists("solution.py"):
-    print("\nsolution.py not found!")
-    exit()
+    due_rows = []
+    for item in revision_items:
+        due = datetime.strptime(item["revision_due"], "%Y-%m-%d").date()
+        if due <= today + timedelta(days=7):
+            status = "Due now" if due <= today else f"Due in {(due - today).days} day(s)"
+            due_rows.append(
+                f"| {item['problem']} | {item['topic']} | {', '.join(item['patterns'])} | {item['revision_due']} | {status} |"
+            )
 
-os.makedirs(os.path.dirname(destination), exist_ok=True)
+    topic_rows = [
+        f"| {topic} | {topic_counts.get(topic, 0)} | {progress_bar(topic_counts.get(topic, 0), total)} |"
+        for topic in sorted(topic_counts)
+    ]
 
-shutil.copy("solution.py", destination)
+    difficulty_rows = [
+        f"| {difficulty} | {count} |"
+        for difficulty, count in sorted(difficulty_counts.items())
+    ]
 
-print(f"\nSaved to {destination}")
+    pattern_rows = [
+        f"| {pattern} | {count} |"
+        for pattern, count in sorted(pattern_counts.items(), key=lambda item: (-item[1], item[0]))
+    ]
 
-subprocess.run(["git", "add", "."])
-subprocess.run(["git", "commit", "-m", f"Solve {problem}"])
-subprocess.run(["git", "push"])
+    recent_rows = [
+        f"| [{item['problem']}]({markdown_link(item['path'])}) | {item['topic']} | {item['difficulty']} | {', '.join(item['patterns'])} | {item['updated_at'][:10]} |"
+        for item in problems[:10]
+    ]
 
-print("\nUploaded Successfully 🚀")
+    return f"""# DSA Progress
+
+Auto-updated by `upload.py`.
+
+## Summary
+
+| Metric | Value |
+| --- | ---: |
+| Problems solved | {total} |
+| Topics touched | {len(topic_counts)} |
+| Patterns identified | {len(pattern_counts)} |
+| Last updated | {datetime.now().strftime("%Y-%m-%d %H:%M")} |
+
+## Topic Progress
+
+| Topic | Solved | Progress |
+| --- | ---: | --- |
+{readme_table(topic_rows, "| No topics yet | 0 | `[--------------------] 0%` |")}
+
+## Difficulty
+
+| Difficulty | Solved |
+| --- | ---: |
+{readme_table(difficulty_rows, "| Not Set | 0 |")}
+
+## Pattern Matching
+
+| Pattern | Problems |
+| --- | ---: |
+{readme_table(pattern_rows, "| No patterns yet | 0 |")}
+
+## Revision Queue
+
+| Problem | Topic | Pattern(s) | Revision Due | Status |
+| --- | --- | --- | --- | --- |
+{readme_table(due_rows, "| No revision due in the next 7 days | - | - | - | - |")}
+
+## Recently Solved
+
+| Problem | Topic | Difficulty | Pattern(s) | Updated |
+| --- | --- | --- | --- | --- |
+{readme_table(recent_rows, "| No problems added yet | - | - | - | - |")}
+"""
+
+
+def update_readme(progress):
+    README_FILE.write_text(build_readme(progress), encoding="utf-8")
+
+
+def run_git_command(args):
+    result = subprocess.run(args, check=False)
+    if result.returncode != 0:
+        command = " ".join(args)
+        raise SystemExit(f"\nCommand failed: {command}")
+
+
+def choose_topic():
+    print("Topics:")
+    for key, value in TOPICS.items():
+        print(f"{key}. {value}")
+
+    topic = input("\nChoose Topic Number: ").strip()
+    if topic not in TOPICS:
+        raise SystemExit("Invalid Topic")
+
+    return topic
+
+
+def choose_difficulty():
+    print("\nDifficulty")
+    for key, value in DIFFICULTIES.items():
+        print(f"{key}. {value}")
+
+    difficulty = DIFFICULTIES.get(input("Choose: ").strip())
+    if not difficulty:
+        raise SystemExit("Invalid Difficulty")
+
+    return difficulty
+
+
+def main():
+    print("\n====== DSA Upload Tool ======\n")
+
+    topic = choose_topic()
+    difficulty = choose_difficulty()
+    problem = input("\nProblem Name: ").strip()
+    if not problem:
+        raise SystemExit("Problem name is required")
+
+    if not SOLUTION_FILE.exists():
+        raise SystemExit("\nsolution.py not found!")
+
+    filename = f"{slugify_problem_name(problem)}.py"
+    topic_dir = TOPICS[topic]
+    destination = Path(topic_dir) / difficulty / filename
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(SOLUTION_FILE, destination)
+
+    code = SOLUTION_FILE.read_text(encoding="utf-8")
+    now = datetime.now().isoformat(timespec="seconds")
+    progress = load_progress()
+    saved_problem, was_revision = upsert_problem(
+        progress,
+        {
+            "problem": problem,
+            "topic": display_topic(topic_dir),
+            "topic_dir": topic_dir,
+            "difficulty": difficulty,
+            "path": destination.as_posix(),
+            "patterns": detect_patterns(problem, topic_dir, code),
+            "updated_at": now,
+        },
+    )
+
+    save_progress(progress)
+    update_readme(progress)
+
+    print(f"\nSaved to {destination}")
+    print(f"Pattern match: {', '.join(saved_problem['patterns'])}")
+    print(f"Revision due: {saved_problem['revision_due']}")
+
+    files_to_stage = [
+        destination.as_posix(),
+        PROGRESS_FILE.as_posix(),
+        README_FILE.as_posix(),
+    ]
+    run_git_command(["git", "add", *files_to_stage])
+
+    action = "Revise" if was_revision else "Solve"
+    run_git_command(["git", "commit", "-m", f"{action} {problem}"])
+    run_git_command(["git", "push"])
+
+    print("\nUploaded Successfully")
+
+
+if __name__ == "__main__":
+    main()

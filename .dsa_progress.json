@@ -12,6 +12,19 @@
       "updated_at": "2026-07-09T15:56:30",
       "revision_count": 0,
       "revision_due": "2026-07-10"
+    },
+    {
+      "problem": "sum_of_digit",
+      "topic": "Basics",
+      "topic_dir": "01_Basics",
+      "difficulty": "Easy",
+      "path": "01_Basics/Easy/sum_of_digit.py",
+      "patterns": [
+        "Math"
+      ],
+      "updated_at": "2026-07-10T17:14:51",
+      "revision_count": 0,
+      "revision_due": "2026-07-11"
     }
   ]
 }

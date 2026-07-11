@@ -38,6 +38,19 @@
       "updated_at": "2026-07-10T17:52:16",
       "revision_count": 0,
       "revision_due": "2026-07-11"
+    },
+    {
+      "problem": "palindrome_check",
+      "topic": "Basics",
+      "topic_dir": "01_Basics",
+      "difficulty": "Easy",
+      "path": "01_Basics/Easy/palindrome_check.py",
+      "patterns": [
+        "Math"
+      ],
+      "updated_at": "2026-07-11T13:26:23",
+      "revision_count": 0,
+      "revision_due": "2026-07-12"
     }
   ]
 }

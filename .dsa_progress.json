@@ -90,6 +90,19 @@
       "updated_at": "2026-07-11T13:58:38",
       "revision_count": 0,
       "revision_due": "2026-07-12"
+    },
+    {
+      "problem": "Check_strong_num",
+      "topic": "Basics",
+      "topic_dir": "01_Basics",
+      "difficulty": "Easy",
+      "path": "01_Basics/Easy/Check_strong_num.py",
+      "patterns": [
+        "Math"
+      ],
+      "updated_at": "2026-07-11T13:59:29",
+      "revision_count": 0,
+      "revision_due": "2026-07-12"
     }
   ]
 }

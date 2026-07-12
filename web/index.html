@@ -20,6 +20,22 @@
         <article><span id="topicCount">0</span><small>topics started</small></article>
       </section>
 
+      <section class="panel upload-panel">
+        <div class="panel-heading"><div><p class="eyebrow">ADD A NEW SOLUTION</p><h2>Save your progress</h2></div></div>
+        <p class="muted">Choose a category and difficulty, then save your solution. It is placed in the correct folder and added to your revision queue automatically.</p>
+        <form id="uploadForm">
+          <div class="form-grid">
+            <label>Problem name<input id="uploadProblem" required placeholder="e.g. Two Sum" /></label>
+            <label>Category<select id="uploadTopic" required></select></label>
+            <label id="newTopicField" class="hidden">New category name<input id="uploadNewTopic" placeholder="e.g. Backtracking" /></label>
+            <label>Difficulty<select id="uploadDifficulty"><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
+          </div>
+          <label>Question details / problem statement<textarea id="uploadQuestionDetail" placeholder="Paste the original problem statement or write the exact conditions you want to remember."></textarea></label>
+          <label>Python solution<textarea id="uploadCode" required spellcheck="false" placeholder="Paste your completed Python solution here."></textarea></label>
+          <div class="action-row"><button class="primary-button" type="submit">Save solution</button><span id="uploadMessage" class="muted"></span></div>
+        </form>
+      </section>
+
       <section class="layout">
         <div class="panel revision-panel">
           <div class="panel-heading"><div><p class="eyebrow">REVISION QUEUE</p><h2>What should I revise?</h2></div><button class="quiet-button" id="refreshButton">Refresh</button></div>
@@ -52,7 +68,7 @@
         </div>
       </section>
     </main>
-    <template id="revisionTemplate"><article class="revision-card"><div><span class="tag"></span><h3></h3><p></p></div><button class="primary-button">Practice</button></article></template>
+    <template id="revisionTemplate"><article class="revision-card"><div><span class="tag"></span><h3></h3><p></p></div><div class="card-actions"><button class="primary-button" data-action="practice">Practice</button><button class="delete-button" data-action="delete">Delete</button></div></article></template>
     <script src="app.js"></script>
   </body>
 </html>

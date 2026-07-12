@@ -12,6 +12,7 @@ import contextlib
 import importlib.util
 import io
 import json
+import re
 import subprocess
 import sys
 from datetime import date, timedelta
@@ -144,6 +145,26 @@ def ensure_question_for_problem(problem: dict[str, Any]) -> bool:
     )
     save_json(QUESTION_FILE, questions)
     return True
+
+
+def save_question_for_problem(problem: dict[str, Any], question_detail: str) -> dict[str, Any]:
+    question = auto_question(
+        problem["problem"],
+        problem.get("topic", "General"),
+        problem.get("difficulty", "Easy"),
+        problem.get("patterns", []),
+    )
+    question["prompt"] = question_detail
+    question["auto_generated"] = False
+    questions = load_questions()
+    for index, existing in enumerate(questions):
+        if question_matches_problem(existing, problem["problem"]):
+            questions[index] = question
+            save_json(QUESTION_FILE, questions)
+            return question
+    questions.append(question)
+    save_json(QUESTION_FILE, questions)
+    return question
 
 
 def find_problem(problems: list[dict[str, Any]], name: str) -> dict[str, Any] | None:

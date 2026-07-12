@@ -2,74 +2,234 @@
   {
     "id": "count-digits",
     "title": "Count Digits",
-    "source_names": ["Count_digit"],
+    "source_names": [
+      "Count_digit"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Given a non-negative integer n, return the number of decimal digits in n. The number 0 has one digit.",
-    "constraints": "0 ≤ n ≤ 10^18. Aim for O(log10 n) time and O(1) extra space.",
-    "edge_cases": ["n = 0 must return 1", "Single-digit values", "The maximum 19-digit value"],
+    "constraints": "0 \u2264 n \u2264 10^18. Aim for O(log10 n) time and O(1) extra space.",
+    "edge_cases": [
+      "n = 0 must return 1",
+      "Single-digit values",
+      "The maximum 19-digit value"
+    ],
     "runner": "class_method",
     "method": "countDigits",
-    "tests": [{"args": [0], "expected": 1}, {"args": [7], "expected": 1}, {"args": [123450], "expected": 6}, {"args": [1000000000000000000], "expected": 19}]
+    "tests": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          7
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          123450
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          1000000000000000000
+        ],
+        "expected": 19
+      }
+    ]
   },
   {
     "id": "sum-digits",
     "title": "Sum of Digits",
-    "source_names": ["sum_of_digit"],
+    "source_names": [
+      "sum_of_digit"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Read a non-negative integer n and print the sum of its decimal digits.",
-    "constraints": "0 ≤ n ≤ 10^18. Use O(log10 n) time and O(1) extra space.",
-    "edge_cases": ["Input 0", "Digits containing zero", "A large 19-digit number"],
-    "tests": [{"input": "0\n", "expected": "0"}, {"input": "10509\n", "expected": "15"}, {"input": "999999\n", "expected": "54"}]
+    "constraints": "0 \u2264 n \u2264 10^18. Use O(log10 n) time and O(1) extra space.",
+    "edge_cases": [
+      "Input 0",
+      "Digits containing zero",
+      "A large 19-digit number"
+    ],
+    "tests": [
+      {
+        "input": "0\n",
+        "expected": "0"
+      },
+      {
+        "input": "10509\n",
+        "expected": "15"
+      },
+      {
+        "input": "999999\n",
+        "expected": "54"
+      }
+    ]
   },
   {
     "id": "palindrome-number",
     "title": "Palindrome Number",
-    "source_names": ["palindrome_check"],
+    "source_names": [
+      "palindrome_check"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Implement Solution.isPalindrome(x). Return True when integer x reads the same forwards and backwards; otherwise return False.",
-    "constraints": "-2^31 ≤ x ≤ 2^31 - 1. Prefer O(log10 |x|) time and O(1) extra space.",
-    "edge_cases": ["Negative numbers are not palindromes", "0 is a palindrome", "Values ending in 0, except 0 itself"],
+    "constraints": "-2^31 \u2264 x \u2264 2^31 - 1. Prefer O(log10 |x|) time and O(1) extra space.",
+    "edge_cases": [
+      "Negative numbers are not palindromes",
+      "0 is a palindrome",
+      "Values ending in 0, except 0 itself"
+    ],
     "runner": "class_method",
     "method": "isPalindrome",
-    "tests": [{"args": [121], "expected": true}, {"args": [-121], "expected": false}, {"args": [10], "expected": false}, {"args": [0], "expected": true}]
+    "tests": [
+      {
+        "args": [
+          121
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          -121
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          10
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          0
+        ],
+        "expected": true
+      }
+    ]
   },
   {
     "id": "prime-check",
     "title": "Check Prime",
-    "source_names": ["check_prime", "Check_prime_num"],
+    "source_names": [
+      "check_prime",
+      "Check_prime_num"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Implement Solution.checkPrime(n). Return the string 'Prime' for a prime number and 'Not Prime' otherwise.",
-    "constraints": "0 ≤ n ≤ 10^9. Target O(√n) time and O(1) space.",
-    "edge_cases": ["0 and 1 are not prime", "2 is the only even prime", "Perfect squares such as 49", "Large prime values"],
+    "constraints": "0 \u2264 n \u2264 10^9. Target O(\u221an) time and O(1) space.",
+    "edge_cases": [
+      "0 and 1 are not prime",
+      "2 is the only even prime",
+      "Perfect squares such as 49",
+      "Large prime values"
+    ],
     "runner": "class_method",
     "method": "checkPrime",
-    "tests": [{"args": [0], "expected": "Not Prime"}, {"args": [2], "expected": "Prime"}, {"args": [49], "expected": "Not Prime"}, {"args": [9973], "expected": "Prime"}]
+    "tests": [
+      {
+        "args": [
+          0
+        ],
+        "expected": "Not Prime"
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": "Prime"
+      },
+      {
+        "args": [
+          49
+        ],
+        "expected": "Not Prime"
+      },
+      {
+        "args": [
+          9973
+        ],
+        "expected": "Prime"
+      }
+    ]
   },
   {
     "id": "automorphic-number",
     "title": "Automorphic Number",
-    "source_names": ["automorphic_number"],
+    "source_names": [
+      "automorphic_number"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Read a non-negative integer n. Print Yes if n^2 ends with the digits of n; otherwise print No.",
-    "constraints": "0 ≤ n ≤ 10^9. Use O(log10 n) time and O(1) extra space.",
-    "edge_cases": ["0 is automorphic because 0² ends in 0", "One-digit values", "A number with trailing zeroes"],
-    "tests": [{"input": "0\n", "expected": "Yes"}, {"input": "25\n", "expected": "Yes"}, {"input": "7\n", "expected": "No"}, {"input": "76\n", "expected": "Yes"}]
+    "constraints": "0 \u2264 n \u2264 10^9. Use O(log10 n) time and O(1) extra space.",
+    "edge_cases": [
+      "0 is automorphic because 0\u00b2 ends in 0",
+      "One-digit values",
+      "A number with trailing zeroes"
+    ],
+    "tests": [
+      {
+        "input": "0\n",
+        "expected": "Yes"
+      },
+      {
+        "input": "25\n",
+        "expected": "Yes"
+      },
+      {
+        "input": "7\n",
+        "expected": "No"
+      },
+      {
+        "input": "76\n",
+        "expected": "Yes"
+      }
+    ]
   },
   {
     "id": "strong-number",
     "title": "Strong Number",
-    "source_names": ["Check_strong_num"],
+    "source_names": [
+      "Check_strong_num"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Read a non-negative integer n. Print Yes when n equals the sum of the factorials of its digits; otherwise print No.",
-    "constraints": "0 ≤ n ≤ 10^9. Use O(log10 n) time and O(1) extra space (a fixed factorial lookup is allowed).",
-    "edge_cases": ["0 because 0! = 1", "Known strong numbers 1, 2, 145 and 40585", "Numbers with repeated digits"],
-    "tests": [{"input": "145\n", "expected": "Yes"}, {"input": "40585\n", "expected": "Yes"}, {"input": "0\n", "expected": "No"}, {"input": "123\n", "expected": "No"}]
+    "constraints": "0 \u2264 n \u2264 10^9. Use O(log10 n) time and O(1) extra space (a fixed factorial lookup is allowed).",
+    "edge_cases": [
+      "0 because 0! = 1",
+      "Known strong numbers 1, 2, 145 and 40585",
+      "Numbers with repeated digits"
+    ],
+    "tests": [
+      {
+        "input": "145\n",
+        "expected": "Yes"
+      },
+      {
+        "input": "40585\n",
+        "expected": "Yes"
+      },
+      {
+        "input": "0\n",
+        "expected": "No"
+      },
+      {
+        "input": "123\n",
+        "expected": "No"
+      }
+    ]
   },
   {
     "id": "two-sum",
@@ -77,11 +237,74 @@
     "topic": "Arrays",
     "difficulty": "Easy",
     "prompt": "Implement Solution.twoSum(nums, target). Return the indices of the two distinct elements whose values add up to target. Exactly one valid answer exists.",
-    "constraints": "2 ≤ len(nums) ≤ 10^4; -10^9 ≤ nums[i], target ≤ 10^9. Target O(n) time and O(n) space.",
-    "edge_cases": ["The answer uses the first or last element", "Duplicate values can form the answer", "Negative numbers", "Do not use the same index twice"],
+    "constraints": "2 \u2264 len(nums) \u2264 10^4; -10^9 \u2264 nums[i], target \u2264 10^9. Target O(n) time and O(n) space.",
+    "edge_cases": [
+      "The answer uses the first or last element",
+      "Duplicate values can form the answer",
+      "Negative numbers",
+      "Do not use the same index twice"
+    ],
     "runner": "class_method",
     "method": "twoSum",
-    "tests": [{"args": [[2, 7, 11, 15], 9], "expected": [0, 1]}, {"args": [[3, 2, 4], 6], "expected": [1, 2]}, {"args": [[3, 3], 6], "expected": [0, 1]}, {"args": [[-3, 4, 3, 90], 0], "expected": [0, 2]}]
+    "tests": [
+      {
+        "args": [
+          [
+            2,
+            7,
+            11,
+            15
+          ],
+          9
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            2,
+            4
+          ],
+          6
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3
+          ],
+          6
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            -3,
+            4,
+            3,
+            90
+          ],
+          0
+        ],
+        "expected": [
+          0,
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "binary-search",
@@ -89,11 +312,61 @@
     "topic": "Binary Search",
     "difficulty": "Easy",
     "prompt": "Implement Solution.search(nums, target). nums is sorted in ascending order; return the target index, or -1 when it is absent.",
-    "constraints": "0 ≤ len(nums) ≤ 10^5; -10^9 ≤ nums[i], target ≤ 10^9. Use O(log n) time and O(1) extra space.",
-    "edge_cases": ["Empty input", "One element", "Target at either endpoint", "Target smaller or larger than every value"],
+    "constraints": "0 \u2264 len(nums) \u2264 10^5; -10^9 \u2264 nums[i], target \u2264 10^9. Use O(log n) time and O(1) extra space.",
+    "edge_cases": [
+      "Empty input",
+      "One element",
+      "Target at either endpoint",
+      "Target smaller or larger than every value"
+    ],
     "runner": "class_method",
     "method": "search",
-    "tests": [{"args": [[-1, 0, 3, 5, 9, 12], 9], "expected": 4}, {"args": [[-1, 0, 3, 5, 9, 12], 2], "expected": -1}, {"args": [[], 4], "expected": -1}, {"args": [[5], 5], "expected": 0}]
+    "tests": [
+      {
+        "args": [
+          [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          9
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          2
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          [],
+          4
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          [
+            5
+          ],
+          5
+        ],
+        "expected": 0
+      }
+    ]
   },
   {
     "id": "longest-unique-substring",
@@ -101,11 +374,41 @@
     "topic": "Strings",
     "difficulty": "Medium",
     "prompt": "Implement Solution.lengthOfLongestSubstring(s). Return the length of the longest substring containing no repeated character.",
-    "constraints": "0 ≤ len(s) ≤ 5 × 10^4. Aim for O(n) time and O(min(n, alphabet)) space.",
-    "edge_cases": ["Empty string", "All characters identical", "The best substring ends at the final character", "A repeat appears just outside the current window"],
+    "constraints": "0 \u2264 len(s) \u2264 5 \u00d7 10^4. Aim for O(n) time and O(min(n, alphabet)) space.",
+    "edge_cases": [
+      "Empty string",
+      "All characters identical",
+      "The best substring ends at the final character",
+      "A repeat appears just outside the current window"
+    ],
     "runner": "class_method",
     "method": "lengthOfLongestSubstring",
-    "tests": [{"args": ["abcabcbb"], "expected": 3}, {"args": ["bbbbb"], "expected": 1}, {"args": ["pwwkew"], "expected": 3}, {"args": [""], "expected": 0}]
+    "tests": [
+      {
+        "args": [
+          "abcabcbb"
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          "bbbbb"
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          "pwwkew"
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          ""
+        ],
+        "expected": 0
+      }
+    ]
   },
   {
     "id": "valid-parentheses",
@@ -113,34 +416,144 @@
     "topic": "Stacks Queues",
     "difficulty": "Easy",
     "prompt": "Implement Solution.isValid(s). Return True when every opening bracket in s is closed by the correct bracket in the correct order.",
-    "constraints": "1 ≤ len(s) ≤ 10^4; s contains only (), [], and {}. Use O(n) time and O(n) space.",
-    "edge_cases": ["A closing bracket appears first", "Unclosed opening bracket", "Incorrectly nested bracket types", "Several independent valid pairs"],
+    "constraints": "1 \u2264 len(s) \u2264 10^4; s contains only (), [], and {}. Use O(n) time and O(n) space.",
+    "edge_cases": [
+      "A closing bracket appears first",
+      "Unclosed opening bracket",
+      "Incorrectly nested bracket types",
+      "Several independent valid pairs"
+    ],
     "runner": "class_method",
     "method": "isValid",
-    "tests": [{"args": ["()"], "expected": true}, {"args": ["()[]{}"], "expected": true}, {"args": ["(]"], "expected": false}, {"args": ["([)]"], "expected": false}, {"args": ["{"], "expected": false}]
+    "tests": [
+      {
+        "args": [
+          "()"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "()[]{}"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "(]"
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          "([)]"
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          "{"
+        ],
+        "expected": false
+      }
+    ]
   },
   {
     "id": "armstrong-number",
     "title": "Armstrong Number",
-    "source_names": ["Armstrong_check"],
+    "source_names": [
+      "Armstrong_check"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Implement Solution.armstrongNumber(n). Return True if n equals the sum of each digit raised to the number of digits; otherwise return False.",
-    "constraints": "0 ≤ n ≤ 10^9. Use O(log10 n) time and O(1) extra space.",
-    "edge_cases": ["0 is an Armstrong number", "All one-digit numbers are Armstrong numbers", "A known multi-digit Armstrong number", "A nearby non-Armstrong number"],
+    "constraints": "0 \u2264 n \u2264 10^9. Use O(log10 n) time and O(1) extra space.",
+    "edge_cases": [
+      "0 is an Armstrong number",
+      "All one-digit numbers are Armstrong numbers",
+      "A known multi-digit Armstrong number",
+      "A nearby non-Armstrong number"
+    ],
     "runner": "class_method",
     "method": "armstrongNumber",
-    "tests": [{"args": [0], "expected": true}, {"args": [7], "expected": true}, {"args": [153], "expected": true}, {"args": [154], "expected": false}]
+    "tests": [
+      {
+        "args": [
+          0
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          7
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          153
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          154
+        ],
+        "expected": false
+      }
+    ]
   },
   {
     "id": "all-factors",
     "title": "Print All Factors",
-    "source_names": ["Factor_all_num"],
+    "source_names": [
+      "Factor_all_num"
+    ],
     "topic": "Basics",
     "difficulty": "Easy",
     "prompt": "Read a positive integer n and print all of its positive factors in increasing order, separated by spaces.",
-    "constraints": "1 ≤ n ≤ 10^9. Aim for O(√n) time; do not loop to n for large inputs.",
-    "edge_cases": ["n = 1", "A prime number has two factors", "A perfect square must not print its square root twice", "A large composite number"],
-    "tests": [{"input": "1\n", "expected": "1"}, {"input": "13\n", "expected": "1 13"}, {"input": "12\n", "expected": "1 2 3 4 6 12"}, {"input": "36\n", "expected": "1 2 3 4 6 9 12 18 36"}]
+    "constraints": "1 \u2264 n \u2264 10^9. Aim for O(\u221an) time; do not loop to n for large inputs.",
+    "edge_cases": [
+      "n = 1",
+      "A prime number has two factors",
+      "A perfect square must not print its square root twice",
+      "A large composite number"
+    ],
+    "tests": [
+      {
+        "input": "1\n",
+        "expected": "1"
+      },
+      {
+        "input": "13\n",
+        "expected": "1 13"
+      },
+      {
+        "input": "12\n",
+        "expected": "1 2 3 4 6 12"
+      },
+      {
+        "input": "36\n",
+        "expected": "1 2 3 4 6 9 12 18 36"
+      }
+    ]
+  },
+  {
+    "id": "harshad-num",
+    "title": "Harshad Num",
+    "source_names": [
+      "Harshad_num"
+    ],
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "prompt": "Re-solve 'Harshad_num' from scratch. Use its original platform statement for the exact input and output format. Identify the Math approach before writing code.",
+    "constraints": "Use the original problem's constraints. Choose an algorithm appropriate for the stated input size; do not rely on only sample inputs.",
+    "edge_cases": [
+      "0",
+      "One-digit or smallest input",
+      "Largest permitted value"
+    ],
+    "tests": [],
+    "auto_generated": true
   }
 ]

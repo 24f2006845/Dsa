@@ -6,6 +6,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from dsa_manager import QUESTION_FILE, ensure_question_for_problem
+from dsa_manager import save_question_for_problem
 
 
 TOPICS = {
@@ -298,6 +299,7 @@ def main():
     problem = input("\nProblem Name: ").strip()
     if not problem:
         raise SystemExit("Problem name is required")
+    question_detail = input("\nQuestion Details (optional): ").strip()
 
     if not SOLUTION_FILE.exists():
         raise SystemExit("\nsolution.py not found!")
@@ -326,7 +328,11 @@ def main():
     )
 
     save_progress(progress)
-    question_added = ensure_question_for_problem(saved_problem)
+    if question_detail:
+        save_question_for_problem(saved_problem, question_detail)
+        question_added = True
+    else:
+        question_added = ensure_question_for_problem(saved_problem)
     update_readme(progress)
 
     print(f"\nSaved to {destination}")

@@ -116,6 +116,19 @@
       "updated_at": "2026-07-12T17:01:55",
       "revision_count": 0,
       "revision_due": "2026-07-13"
+    },
+    {
+      "problem": "Harshad_num",
+      "topic": "Basics",
+      "topic_dir": "01_Basics",
+      "difficulty": "Medium",
+      "path": "01_Basics/Medium/Harshad_num.py",
+      "patterns": [
+        "Math"
+      ],
+      "updated_at": "2026-07-12T18:54:50",
+      "revision_count": 1,
+      "revision_due": "2026-07-15"
     }
   ]
 }

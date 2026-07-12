@@ -1,4 +1,4 @@
-const state = { dashboard: null, questions: [], selected: null, selectedSavedProblem: null };
+const state = { dashboard: null, questions: [], topics: [], selected: null, selectedSavedProblem: null };
 const $ = (selector) => document.querySelector(selector);
 
 async function request(url, options = {}) {
@@ -29,9 +29,10 @@ function renderDashboard() {
     node.querySelector(".tag").textContent = `${problem.topic} · ${problem.difficulty}`;
     node.querySelector("h3").textContent = problem.problem;
     node.querySelector("p").textContent = `${relativeDue(problem.days_until_revision)}${problem.practice_question ? " · prompt ready" : " · add its prompt"}`;
-    const button = node.querySelector("button"); button.disabled = !problem.practice_question;
-    button.textContent = problem.practice_question ? "Practice" : "No prompt yet";
-    button.addEventListener("click", () => selectQuestion(problem.practice_question, problem.problem));
+    const practiceButton = node.querySelector('[data-action="practice"]'); practiceButton.disabled = !problem.practice_question;
+    practiceButton.textContent = problem.practice_question ? "Practice" : "No prompt yet";
+    practiceButton.addEventListener("click", () => selectQuestion(problem.practice_question, problem.problem));
+    node.querySelector('[data-action="delete"]').addEventListener("click", () => deleteSolution(problem.problem));
     list.append(node);
   });
 }
@@ -44,6 +45,11 @@ function renderQuestions() {
     button.innerHTML = `<strong>${escapeHtml(question.title)}</strong><span>${escapeHtml(question.topic)} · ${escapeHtml(question.difficulty)}</span>`;
     button.addEventListener("click", () => selectQuestion(question)); list.append(button);
   });
+}
+
+function renderTopics() {
+  const select = $("#uploadTopic");
+  select.innerHTML = state.topics.map(topic => `<option value="${escapeHtml(topic.name)}">${escapeHtml(topic.name)}</option>`).join("") + '<option value="__new__">+ Create new category</option>';
 }
 
 function starterCode(question) {
@@ -84,10 +90,42 @@ async function markRevised() {
   } catch (error) { alert(error.message); }
 }
 
+function toggleNewTopic() {
+  const isNew = $("#uploadTopic").value === "__new__";
+  $("#newTopicField").classList.toggle("hidden", !isNew);
+  $("#uploadNewTopic").required = isNew;
+}
+
+async function uploadSolution(event) {
+  event.preventDefault();
+  const message = $("#uploadMessage"); message.className = "muted"; message.textContent = "Saving…";
+  const uploadedProblem = $("#uploadProblem").value;
+  const topic = $("#uploadTopic").value === "__new__" ? $("#uploadNewTopic").value : $("#uploadTopic").value;
+  const questionDetail = $("#uploadQuestionDetail").value.trim();
+  try {
+    const data = await request("/api/upload", { method: "POST", body: JSON.stringify({ problem: uploadedProblem, topic, difficulty: $("#uploadDifficulty").value, code: $("#uploadCode").value, question_detail: questionDetail }) });
+    state.dashboard = data.dashboard; state.topics = data.topics;
+    state.questions = (await request("/api/questions")).questions;
+    renderDashboard(); renderQuestions(); renderTopics();
+    message.className = "result-pass"; message.textContent = `${data.message}${data.prompt_added ? " Revision prompt created." : ""}`;
+    $("#uploadForm").reset(); toggleNewTopic();
+    if (data.question) selectQuestion(data.question, uploadedProblem);
+  } catch (error) { message.className = "result-fail"; message.textContent = error.message; }
+}
+
+async function deleteSolution(problem) {
+  if (!confirm(`Delete '${problem}'? This removes its saved solution file and revision entry.`)) return;
+  try {
+    const data = await request("/api/delete-solution", { method: "POST", body: JSON.stringify({ problem }) });
+    state.dashboard = data.dashboard; renderDashboard();
+    if (state.selectedSavedProblem === problem) $("#practiceArea").classList.add("hidden");
+  } catch (error) { alert(error.message); }
+}
+
 async function initialise() {
   try {
-    const [dashboard, questionData] = await Promise.all([request("/api/dashboard"), request("/api/questions")]);
-    state.dashboard = dashboard; state.questions = questionData.questions; renderDashboard(); renderQuestions();
+    const [dashboard, questionData, topicData] = await Promise.all([request("/api/dashboard"), request("/api/questions"), request("/api/topics")]);
+    state.dashboard = dashboard; state.questions = questionData.questions; state.topics = topicData.topics; renderDashboard(); renderQuestions(); renderTopics();
   } catch (error) { $("#revisionList").innerHTML = `<p class="result-fail">Could not load your DSA data: ${escapeHtml(error.message)}</p>`; }
 }
 
@@ -96,6 +134,8 @@ $("#questionFilter").addEventListener("input", renderQuestions);
 $("#runTests").addEventListener("click", runTests);
 $("#markRevised").addEventListener("click", markRevised);
 $("#closePractice").addEventListener("click", () => $("#practiceArea").classList.add("hidden"));
+$("#uploadTopic").addEventListener("change", toggleNewTopic);
+$("#uploadForm").addEventListener("submit", uploadSolution);
 $("#codeEditor").addEventListener("input", event => {
   if (state.selected) localStorage.setItem(`dsa-draft:${state.selected.id}`, event.target.value);
 });

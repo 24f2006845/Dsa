@@ -6,28 +6,28 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 8 |
+| Problems solved | 9 |
 | Topics touched | 1 |
 | Patterns identified | 1 |
-| Last updated | 2026-07-12 16:32 |
+| Last updated | 2026-07-12 17:01 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Basics | 8 | `[####################] 100%` |
+| Basics | 9 | `[####################] 100%` |
 
 ## Difficulty
 
 | Difficulty | Solved |
 | --- | ---: |
-| Easy | 8 |
+| Easy | 9 |
 
 ## Pattern Matching
 
 | Pattern | Problems |
 | --- | ---: |
-| Math | 8 |
+| Math | 9 |
 
 ## Revision Queue
 
@@ -38,6 +38,7 @@ Auto-updated by `upload.py`.
 | Factor_all_num | Basics | Math | 2026-07-12 | Due now |
 | Armstrong_check | Basics | Math | 2026-07-12 | Due now |
 | palindrome_check | Basics | Math | 2026-07-12 | Due now |
+| check_prime | Basics | Math | 2026-07-13 | Due in 1 day(s) |
 | Count_digit | Basics | Math | 2026-07-13 | Due in 1 day(s) |
 | sum_of_digit | Basics | Math | 2026-07-15 | Due in 3 day(s) |
 | automorphic_number | Basics | Math | 2026-07-15 | Due in 3 day(s) |
@@ -46,6 +47,7 @@ Auto-updated by `upload.py`.
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [check_prime](01_Basics/Easy/check_prime.py) | Basics | Easy | Math | 2026-07-12 |
 | [sum_of_digit](01_Basics/Easy/sum_of_digit.py) | Basics | Easy | Math | 2026-07-12 |
 | [automorphic_number](01_Basics/Easy/automorphic_number.py) | Basics | Easy | Math | 2026-07-12 |
 | [Check_strong_num](01_Basics/Easy/Check_strong_num.py) | Basics | Easy | Math | 2026-07-11 |

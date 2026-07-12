@@ -103,6 +103,19 @@
       "updated_at": "2026-07-11T13:59:29",
       "revision_count": 0,
       "revision_due": "2026-07-12"
+    },
+    {
+      "problem": "check_prime",
+      "topic": "Basics",
+      "topic_dir": "01_Basics",
+      "difficulty": "Easy",
+      "path": "01_Basics/Easy/check_prime.py",
+      "patterns": [
+        "Math"
+      ],
+      "updated_at": "2026-07-12T17:01:55",
+      "revision_count": 0,
+      "revision_due": "2026-07-13"
     }
   ]
 }

@@ -5,6 +5,8 @@ import subprocess
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+from dsa_manager import QUESTION_FILE, ensure_question_for_problem
+
 
 TOPICS = {
     "1": "01_Basics",
@@ -324,15 +326,19 @@ def main():
     )
 
     save_progress(progress)
+    question_added = ensure_question_for_problem(saved_problem)
     update_readme(progress)
 
     print(f"\nSaved to {destination}")
     print(f"Pattern match: {', '.join(saved_problem['patterns'])}")
     print(f"Revision due: {saved_problem['revision_due']}")
+    if question_added:
+        print("Generated a revision prompt for this question.")
 
     files_to_stage = [
         destination.as_posix(),
         PROGRESS_FILE.as_posix(),
+        QUESTION_FILE.as_posix(),
         README_FILE.as_posix(),
     ]
     run_git_command(["git", "add", *files_to_stage])

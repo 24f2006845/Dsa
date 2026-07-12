@@ -1,6 +1,40 @@
 # DSA Progress
 
-Auto-updated by `upload.py`.
+Auto-updated by `upload.py`. Use `dsa_manager.py` for daily revision, practice prompts, and local test-case checks.
+
+## DSA Manager
+
+```bash
+# Start the browser dashboard at http://127.0.0.1:8000
+python3 app.py
+
+# See work due today, then get a concept refresher and next revision problems.
+python3 dsa_manager.py dashboard
+python3 dsa_manager.py revise
+
+# To re-solve one saved concept, show its complete question immediately.
+python3 dsa_manager.py revise checkPrime
+
+# Get a practice problem with constraints and edge cases.
+python3 dsa_manager.py list-questions
+python3 dsa_manager.py practice --question prime-check
+
+# Generate revision prompts for older saved solutions that do not have one yet.
+python3 dsa_manager.py sync-questions
+
+# Check a standalone program or a Solution class against saved tests.
+python3 dsa_manager.py check solution.py --question prime-check
+
+# Save a question you create, including its constraints, edge cases, and tests.
+python3 dsa_manager.py add-question --id even-number --title "Even Number" --topic Basics --prompt "Print Yes for an even integer, otherwise No." --constraints "-10^9 ≤ n ≤ 10^9" --edge-case "0 is even" --test '{"input":"4\\n","expected":"Yes"}'
+
+# Once you have re-solved a saved problem, schedule its next spaced review.
+python3 dsa_manager.py mark-revised "check_prime"
+```
+
+Questions and test cases live in `.dsa_questions.json`; add another object there to grow your personal question bank.
+
+When you use `upload.py` for a new solution, it now automatically creates a revision prompt for that problem and stores it in the same question bank. The solution still follows your topic/difficulty folders, for example `03_Arrays/Easy/` or `03_Arrays/Medium/`.
 
 ## Summary
 

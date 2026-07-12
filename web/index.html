@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA Revision Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">YOUR DAILY STUDY SPACE</p>
+        <h1>DSA Revision Manager</h1>
+        <p>Choose a concept, re-solve it from scratch, and test your answer before moving on.</p>
+      </header>
+
+      <section class="stats" aria-label="Progress summary">
+        <article><span id="solvedCount">0</span><small>problems solved</small></article>
+        <article><span id="dueCount">0</span><small>due today</small></article>
+        <article><span id="topicCount">0</span><small>topics started</small></article>
+      </section>
+
+      <section class="layout">
+        <div class="panel revision-panel">
+          <div class="panel-heading"><div><p class="eyebrow">REVISION QUEUE</p><h2>What should I revise?</h2></div><button class="quiet-button" id="refreshButton">Refresh</button></div>
+          <p class="muted">Pick a saved problem to open its question. Finish it, run the tests, then mark it revised.</p>
+          <div id="revisionList" class="revision-list"></div>
+        </div>
+
+        <aside class="panel question-bank">
+          <p class="eyebrow">PRACTICE BANK</p><h2>Try something new</h2>
+          <label class="sr-only" for="questionFilter">Filter questions</label>
+          <input id="questionFilter" type="search" placeholder="Search topics or questions" />
+          <div id="questionList" class="question-list"></div>
+        </aside>
+      </section>
+
+      <section id="practiceArea" class="practice-area hidden" aria-live="polite">
+        <div class="panel problem-panel">
+          <div class="panel-heading"><div><p class="eyebrow" id="problemMeta">PRACTICE</p><h2 id="problemTitle">Choose a problem</h2></div><button class="quiet-button" id="closePractice">Close</button></div>
+          <p id="problemPrompt" class="prompt"></p>
+          <div class="detail-grid"><div><h3>Constraints</h3><p id="problemConstraints"></p></div><div><h3>Edge cases</h3><ul id="edgeCases"></ul></div></div>
+          <h3>Sample tests</h3><div id="sampleTests" class="sample-tests"></div>
+          <div class="action-row"><button id="markRevised" class="secondary-button hidden">Mark as revised</button></div>
+        </div>
+
+        <div class="panel editor-panel">
+          <div class="panel-heading"><div><p class="eyebrow">YOUR SOLUTION</p><h2>Write or paste Python</h2></div><button id="runTests" class="primary-button">Run tests</button></div>
+          <p class="muted" id="solutionHint">Use the method name shown in the question.</p>
+          <textarea id="codeEditor" spellcheck="false" placeholder="class Solution:\n    def yourMethod(self, ...):\n        pass"></textarea>
+          <div id="testResults" class="test-results muted">Your test results will appear here.</div>
+        </div>
+      </section>
+    </main>
+    <template id="revisionTemplate"><article class="revision-card"><div><span class="tag"></span><h3></h3><p></p></div><button class="primary-button">Practice</button></article></template>
+    <script src="app.js"></script>
+  </body>
+</html>

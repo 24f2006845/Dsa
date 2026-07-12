@@ -1,10 +1,20 @@
-class Solution:
-    def checkPrime(self, n):
-        if n <= 1:
-            return "Not Prime"
+#Write your code here
+a = int(input())
 
-        for i in range(2, int(n ** 0.5) + 1):
-            if n % i == 0:
-                return "Not Prime"
+def Factorial(a):
+    if a == 0 or a == 1:
+        return 1
+    return a * Factorial(a - 1)
 
-        return "Prime"
+def check_strong_num(a):
+    digits = [int(d) for d in str(a)]
+    Fact_sum = 0
+    for num in digits:
+        result = Factorial(num)
+        Fact_sum += result
+    if(Fact_sum == a):
+        print("Yes")
+    else:
+        print("No")
+
+check_strong_num(a)

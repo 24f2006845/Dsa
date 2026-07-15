@@ -7,7 +7,9 @@ Run `python3 app.py`, then open http://127.0.0.1:8000 in a browser.
 from __future__ import annotations
 
 import json
+import subprocess
 import tempfile
+import threading
 from datetime import date, datetime, timedelta
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -34,10 +36,94 @@ from upload import TOPICS, detect_patterns, display_topic, slugify_problem_name,
 ROOT = Path(__file__).resolve().parent
 WEB_ROOT = ROOT / "web"
 TOPIC_FILE = ROOT / ".dsa_topics.json"
+GIT_LOCK = threading.Lock()
+DIFFICULTIES = {"Easy", "Medium", "Hard"}
 
 
 def question_for_problem(problem_name: str, questions: list[dict]) -> dict | None:
     return next((question for question in questions if question_matches_problem(question, problem_name)), None)
+
+
+def git_sync(files: list[Path], message: str) -> str:
+    """Commit only this action's files, then push the current branch."""
+    relative_files = sorted({path.resolve().relative_to(ROOT).as_posix() for path in files if path.exists()})
+    if not relative_files:
+        raise ValueError("Nothing was available to commit.")
+
+    def run(*args: str) -> subprocess.CompletedProcess[str]:
+        result = subprocess.run(
+            args, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False
+        )
+        if result.returncode:
+            detail = result.stdout.strip() or "Unknown Git error."
+            raise ValueError(f"Git sync failed: {detail}")
+        return result
+
+    with GIT_LOCK:
+        run("git", "add", "--", *relative_files)
+        staged = subprocess.run(
+            ["git", "diff", "--cached", "--quiet", "--", *relative_files], cwd=ROOT, check=False
+        )
+        if staged.returncode == 0:
+            return "No new Git changes to commit."
+        if staged.returncode != 1:
+            raise ValueError("Git could not inspect the staged changes.")
+        # --only prevents unrelated files already staged by the user from being committed.
+        run("git", "commit", "--only", "-m", message, "--", *relative_files)
+        run("git", "push")
+    return "Committed and pushed to GitHub."
+
+
+def folder_questions() -> list[dict]:
+    """Expose every saved topic/difficulty file as a selectable practice card."""
+    cards = []
+    for topic in topic_options():
+        topic_dir = ROOT / topic["directory"]
+        for difficulty in DIFFICULTIES:
+            level_dir = topic_dir / difficulty
+            if not level_dir.is_dir():
+                continue
+            for solution in sorted(level_dir.glob("*.py")):
+                relative_path = solution.relative_to(ROOT).as_posix()
+                cards.append(
+                    {
+                        "id": f"folder:{relative_path}",
+                        "title": solution.stem.replace("_", " ").title(),
+                        "source_names": [solution.stem],
+                        "topic": topic["name"],
+                        "difficulty": difficulty,
+                        "prompt": f"Re-solve '{solution.stem}' from scratch. Use the original platform statement for the exact requirements, then submit your new solution to replace this saved version.",
+                        "constraints": "Use the original problem constraints and aim for the intended time and space complexity.",
+                        "edge_cases": ["Smallest valid input", "Boundary values", "Duplicates or repeated state when allowed"],
+                        "tests": [],
+                        "auto_generated": True,
+                        "source_path": relative_path,
+                    }
+                )
+    return cards
+
+
+def practice_questions() -> list[dict]:
+    """Return question-bank cards enriched with their saved folder destination."""
+    progress = load_progress()
+    cards = []
+    covered_paths = set()
+    for question in load_questions():
+        card = dict(question)
+        saved = next((item for item in progress["problems"] if question_matches_problem(question, item["problem"])), None)
+        if saved:
+            card["source_path"] = saved["path"]
+            card["saved_problem"] = saved["problem"]
+            covered_paths.add(saved["path"])
+        cards.append(card)
+    for card in folder_questions():
+        if card["source_path"] not in covered_paths:
+            cards.append(card)
+    return cards
+
+
+def practice_question(question_id: str) -> dict | None:
+    return next((item for item in practice_questions() if item["id"] == question_id), None)
 
 
 def dashboard_data() -> dict:
@@ -54,6 +140,8 @@ def dashboard_data() -> dict:
         due = date.fromisoformat(item["revision_due"])
         item["days_until_revision"] = (due - today).days
         item["practice_question"] = question_for_problem(item["problem"], questions)
+        if item["practice_question"]:
+            item["practice_question"] = dict(item["practice_question"], source_path=item["path"], saved_problem=item["problem"])
         problems.append(item)
     problems.sort(key=lambda item: (item["revision_due"], item["problem"]))
     return {
@@ -98,7 +186,7 @@ def save_solution(payload: dict) -> dict:
         raise ValueError("Enter a problem name.")
     if not code.strip():
         raise ValueError("Paste your Python solution before saving.")
-    if difficulty not in {"Easy", "Medium", "Hard"}:
+    if difficulty not in DIFFICULTIES:
         raise ValueError("Choose Easy, Medium, or Hard.")
 
     directory, topic_name = topic_directory(str(payload.get("topic", "")))
@@ -129,12 +217,63 @@ def save_solution(payload: dict) -> dict:
             None,
         )
     update_readme(progress)
+    git_message = git_sync(
+        [destination, PROGRESS_FILE, QUESTION_FILE, ROOT / "README.md"],
+        f"{'Revise' if was_revision else 'Solve'} {problem_name}",
+    )
     return {
-        "message": f"{'Updated revision' if was_revision else 'Saved solution'} in {destination.relative_to(ROOT)}.",
+        "message": f"{'Updated revision' if was_revision else 'Saved solution'} in {destination.relative_to(ROOT)}. {git_message}",
         "prompt_added": prompt_added,
-        "question": generated_question,
+        "question": dict(generated_question, source_path=destination.relative_to(ROOT).as_posix(), saved_problem=saved["problem"]) if generated_question else None,
         "dashboard": dashboard_data(),
         "topics": topic_options(),
+    }
+
+
+def submit_practice_solution(payload: dict) -> dict:
+    question = practice_question(str(payload.get("question_id", "")))
+    code = str(payload.get("code", ""))
+    if not question:
+        raise ValueError("Unknown practice question. Refresh the page and try again.")
+    if not code.strip():
+        raise ValueError("Write a Python solution before submitting.")
+    if not question.get("source_path"):
+        raise ValueError("This question is not linked to a topic folder. Save it using 'Save your progress' above.")
+
+    destination = (ROOT / question["source_path"]).resolve()
+    if ROOT not in destination.parents or destination.suffix != ".py":
+        raise ValueError("Invalid practice solution path.")
+    parts = destination.relative_to(ROOT).parts
+    if len(parts) != 3 or parts[1] not in DIFFICULTIES:
+        raise ValueError("Practice solutions must be inside Topic/Easy, Medium, or Hard.")
+    destination.write_text(code.rstrip() + "\n", encoding="utf-8")
+
+    progress = load_progress()
+    problem_name = question.get("saved_problem") or question.get("source_names", [destination.stem])[0]
+    saved, was_revision = upsert_problem(
+        progress,
+        {
+            "problem": problem_name,
+            "topic": display_topic(parts[0]),
+            "topic_dir": parts[0],
+            "difficulty": parts[1],
+            "path": destination.relative_to(ROOT).as_posix(),
+            "patterns": detect_patterns(problem_name, parts[0], code),
+            "updated_at": datetime.now().isoformat(timespec="seconds"),
+        },
+    )
+    save_json(PROGRESS_FILE, progress)
+    ensure_question_for_problem(saved)
+    update_readme(progress)
+    git_message = git_sync(
+        [destination, PROGRESS_FILE, QUESTION_FILE, ROOT / "README.md"],
+        f"{'Revise' if was_revision else 'Solve'} {problem_name}",
+    )
+    return {
+        "message": f"Submitted {destination.relative_to(ROOT)}. {git_message}",
+        "dashboard": dashboard_data(),
+        "questions": practice_questions(),
+        "saved_problem": saved["problem"],
     }
 
 
@@ -170,11 +309,13 @@ def delete_solution(problem_name: str) -> dict:
 
 
 def judge_solution(code: str, question_id: str) -> dict:
-    question = next((item for item in load_questions() if item["id"] == question_id), None)
+    question = practice_question(question_id)
     if not question:
         raise ValueError("Unknown practice question.")
     if not code.strip():
         raise ValueError("Paste your Python solution before running tests.")
+    if not question.get("tests"):
+        raise ValueError("This folder question has no saved test cases. You can still submit your solution and commit it.")
 
     results = []
     with tempfile.TemporaryDirectory(prefix="dsa-manager-") as directory:
@@ -225,7 +366,7 @@ class DSAHandler(SimpleHTTPRequestHandler):
             self.send_json(dashboard_data())
             return
         if path == "/api/questions":
-            self.send_json({"questions": load_questions()})
+            self.send_json({"questions": practice_questions()})
             return
         if path == "/api/topics":
             self.send_json({"topics": topic_options()})
@@ -251,10 +392,17 @@ class DSAHandler(SimpleHTTPRequestHandler):
                 problem["revision_count"] = count
                 problem["revision_due"] = (date.today() + timedelta(days=interval)).isoformat()
                 save_json(PROGRESS_FILE, progress)
-                self.send_json({"message": f"Next revision: {problem['revision_due']}", "dashboard": dashboard_data()})
+                update_readme(progress)
+                git_message = git_sync(
+                    [PROGRESS_FILE, ROOT / "README.md"], f"Revise {problem['problem']}"
+                )
+                self.send_json({"message": f"Next revision: {problem['revision_due']}. {git_message}", "dashboard": dashboard_data()})
                 return
             if path == "/api/upload":
                 self.send_json(save_solution(payload))
+                return
+            if path == "/api/practice-submit":
+                self.send_json(submit_practice_solution(payload))
                 return
             if path == "/api/delete-solution":
                 self.send_json(delete_solution(payload.get("problem", "")))

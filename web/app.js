@@ -39,8 +39,13 @@ function renderDashboard() {
 
 function renderQuestions() {
   const term = $("#questionFilter").value.toLowerCase().trim();
+  const topic = $("#practiceTopicFilter").value;
+  const difficulty = $("#practiceDifficultyFilter").value;
   const list = $("#questionList"); list.innerHTML = "";
-  state.questions.filter(q => `${q.title} ${q.topic} ${q.difficulty}`.toLowerCase().includes(term)).forEach(question => {
+  state.questions.filter(q =>
+    `${q.title} ${q.topic} ${q.difficulty}`.toLowerCase().includes(term) &&
+    (!topic || q.topic === topic) && (!difficulty || q.difficulty === difficulty)
+  ).forEach(question => {
     const button = document.createElement("button"); button.className = "question-button";
     button.innerHTML = `<strong>${escapeHtml(question.title)}</strong><span>${escapeHtml(question.topic)} · ${escapeHtml(question.difficulty)}</span>`;
     button.addEventListener("click", () => selectQuestion(question)); list.append(button);
@@ -50,6 +55,11 @@ function renderQuestions() {
 function renderTopics() {
   const select = $("#uploadTopic");
   select.innerHTML = state.topics.map(topic => `<option value="${escapeHtml(topic.name)}">${escapeHtml(topic.name)}</option>`).join("") + '<option value="__new__">+ Create new category</option>';
+  const practiceFilter = $("#practiceTopicFilter");
+  const selected = practiceFilter.value;
+  const questionTopics = [...new Set(state.questions.map(question => question.topic))].sort();
+  practiceFilter.innerHTML = '<option value="">All folders</option>' + questionTopics.map(topic => `<option value="${escapeHtml(topic)}">${escapeHtml(topic)}</option>`).join("");
+  practiceFilter.value = questionTopics.includes(selected) ? selected : "";
 }
 
 function starterCode(question) {
@@ -71,6 +81,7 @@ function selectQuestion(question, savedProblem = null) {
   $("#solutionHint").textContent = question.runner === "class_method" ? `Create class Solution with method ${question.method}(...)` : "Read standard input and print only the final answer.";
   $("#codeEditor").value = localStorage.getItem(`dsa-draft:${question.id}`) || starterCode(question); $("#testResults").className = "test-results muted"; $("#testResults").textContent = "Your test results will appear here.";
   $("#markRevised").classList.toggle("hidden", !savedProblem);
+  $("#submitPractice").classList.toggle("hidden", !question.source_path);
   $("#practiceArea").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -88,6 +99,24 @@ async function markRevised() {
     const data = await request("/api/mark-revised", { method: "POST", body: JSON.stringify({ problem: state.selectedSavedProblem }) });
     state.dashboard = data.dashboard; renderDashboard(); alert(`Saved. ${data.message}`);
   } catch (error) { alert(error.message); }
+}
+
+async function submitPractice() {
+  if (!state.selected) return;
+  const button = $("#submitPractice");
+  button.disabled = true; button.textContent = "Submitting…";
+  try {
+    const data = await request("/api/practice-submit", { method: "POST", body: JSON.stringify({ question_id: state.selected.id, code: $("#codeEditor").value }) });
+    state.dashboard = data.dashboard; state.questions = data.questions;
+    state.selectedSavedProblem = data.saved_problem;
+    renderDashboard(); renderQuestions();
+    $("#markRevised").classList.remove("hidden");
+    $("#testResults").className = "test-results result-pass";
+    $("#testResults").textContent = data.message;
+  } catch (error) {
+    $("#testResults").className = "test-results result-fail";
+    $("#testResults").textContent = error.message;
+  } finally { button.disabled = false; button.textContent = "Submit solution & commit"; }
 }
 
 function toggleNewTopic() {
@@ -131,7 +160,10 @@ async function initialise() {
 
 $("#refreshButton").addEventListener("click", initialise);
 $("#questionFilter").addEventListener("input", renderQuestions);
+$("#practiceTopicFilter").addEventListener("change", renderQuestions);
+$("#practiceDifficultyFilter").addEventListener("change", renderQuestions);
 $("#runTests").addEventListener("click", runTests);
+$("#submitPractice").addEventListener("click", submitPractice);
 $("#markRevised").addEventListener("click", markRevised);
 $("#closePractice").addEventListener("click", () => $("#practiceArea").classList.add("hidden"));
 $("#uploadTopic").addEventListener("change", toggleNewTopic);

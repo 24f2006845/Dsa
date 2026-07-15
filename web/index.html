@@ -44,7 +44,14 @@
         </div>
 
         <aside class="panel question-bank">
-          <p class="eyebrow">PRACTICE BANK</p><h2>Try something new</h2>
+          <p class="eyebrow">PRACTICE BANK</p><h2>Try by folder or level</h2>
+          <p class="muted">Browse your saved topic folders, including Easy, Medium, and Hard solutions.</p>
+          <div class="practice-filters">
+            <label class="sr-only" for="practiceTopicFilter">Filter by folder</label>
+            <select id="practiceTopicFilter"><option value="">All folders</option></select>
+            <label class="sr-only" for="practiceDifficultyFilter">Filter by difficulty</label>
+            <select id="practiceDifficultyFilter"><option value="">All levels</option><option>Easy</option><option>Medium</option><option>Hard</option></select>
+          </div>
           <label class="sr-only" for="questionFilter">Filter questions</label>
           <input id="questionFilter" type="search" placeholder="Search topics or questions" />
           <div id="questionList" class="question-list"></div>
@@ -57,13 +64,14 @@
           <p id="problemPrompt" class="prompt"></p>
           <div class="detail-grid"><div><h3>Constraints</h3><p id="problemConstraints"></p></div><div><h3>Edge cases</h3><ul id="edgeCases"></ul></div></div>
           <h3>Sample tests</h3><div id="sampleTests" class="sample-tests"></div>
-          <div class="action-row"><button id="markRevised" class="secondary-button hidden">Mark as revised</button></div>
+          <div class="action-row"><button id="markRevised" class="secondary-button hidden">Mark as revised &amp; commit</button></div>
         </div>
 
         <div class="panel editor-panel">
           <div class="panel-heading"><div><p class="eyebrow">YOUR SOLUTION</p><h2>Write or paste Python</h2></div><button id="runTests" class="primary-button">Run tests</button></div>
           <p class="muted" id="solutionHint">Use the method name shown in the question.</p>
           <textarea id="codeEditor" spellcheck="false" placeholder="class Solution:\n    def yourMethod(self, ...):\n        pass"></textarea>
+          <div class="action-row"><button id="submitPractice" class="secondary-button hidden">Submit solution &amp; commit</button></div>
           <div id="testResults" class="test-results muted">Your test results will appear here.</div>
         </div>
       </section>

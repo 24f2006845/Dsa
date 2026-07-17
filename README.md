@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 10 |
 | Topics touched | 1 |
 | Patterns identified | 1 |
-| Last updated | 2026-07-15 18:16 |
+| Last updated | 2026-07-18 02:20 |
 
 ## Topic Progress
 
@@ -34,15 +34,14 @@ Auto-updated by `upload.py`.
 
 | Problem | Topic | Pattern(s) | Revision Due | Status |
 | --- | --- | --- | --- | --- |
-| Count_digit | Basics | Math | 2026-07-19 | Due in 4 day(s) |
-| Harshad_num | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| Armstrong_check | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| Factor_all_num | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| palindrome_check | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| Check_strong_num | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| Check_prime_num | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| sum_of_digit | Basics | Math | 2026-07-21 | Due in 6 day(s) |
-| automorphic_number | Basics | Math | 2026-07-21 | Due in 6 day(s) |
+| Harshad_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| Armstrong_check | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| Factor_all_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| palindrome_check | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| Check_strong_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| Check_prime_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| sum_of_digit | Basics | Math | 2026-07-21 | Due in 3 day(s) |
+| automorphic_number | Basics | Math | 2026-07-21 | Due in 3 day(s) |
 
 ## Recently Solved
 

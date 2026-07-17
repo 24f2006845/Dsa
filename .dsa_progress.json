@@ -10,8 +10,8 @@
         "Math"
       ],
       "updated_at": "2026-07-10T17:57:32",
-      "revision_count": 2,
-      "revision_due": "2026-07-19"
+      "revision_count": 3,
+      "revision_due": "2026-08-01"
     },
     {
       "problem": "sum_of_digit",

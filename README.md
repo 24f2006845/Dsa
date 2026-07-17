@@ -35,7 +35,6 @@ Auto-updated by `upload.py`.
 | Problem | Topic | Pattern(s) | Revision Due | Status |
 | --- | --- | --- | --- | --- |
 | Harshad_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
-| Armstrong_check | Basics | Math | 2026-07-21 | Due in 3 day(s) |
 | Factor_all_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |
 | palindrome_check | Basics | Math | 2026-07-21 | Due in 3 day(s) |
 | Check_strong_num | Basics | Math | 2026-07-21 | Due in 3 day(s) |

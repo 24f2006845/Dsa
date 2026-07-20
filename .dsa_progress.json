@@ -35,9 +35,10 @@
       "patterns": [
         "Math"
       ],
-      "updated_at": "2026-07-12T16:31:14",
-      "revision_count": 2,
-      "revision_due": "2026-07-21"
+      "updated_at": "2026-07-20T12:19:19",
+      "revision_count": 3,
+      "revision_due": "2026-08-03",
+      "last_revised": "2026-07-20"
     },
     {
       "problem": "palindrome_check",

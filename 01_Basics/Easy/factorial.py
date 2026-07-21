@@ -1,3 +1,4 @@
+# Read input, solve the problem, and print the answer.
 class Solution:
     def factorial(self, n: int) -> int:
         fact = 1

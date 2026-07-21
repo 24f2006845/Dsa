@@ -42,10 +42,10 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Check_prime_num | Basics | 3 | Before tracking | 2026-08-01 | Due in 11 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 13 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 13 day(s) |
-| palindrome_check | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 27 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 27 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 29 day(s) |
+| palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 30 day(s) |
 
 ## Recently Solved
 

@@ -49,9 +49,10 @@
       "patterns": [
         "Math"
       ],
-      "updated_at": "2026-07-12T17:03:24",
-      "revision_count": 2,
-      "revision_due": "2026-07-21"
+      "updated_at": "2026-07-21T17:05:21",
+      "revision_count": 3,
+      "revision_due": "2026-08-04",
+      "last_revised": "2026-07-21"
     },
     {
       "problem": "Armstrong_check",

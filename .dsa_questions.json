@@ -573,5 +573,23 @@
     ],
     "tests": [],
     "auto_generated": false
+  },
+  {
+    "id": "reversesubarray",
+    "title": "Reversesubarray",
+    "source_names": [
+      "reverseSubArray"
+    ],
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "prompt": "Given an array arr, you need to reverse a subarray of that array. The range of this subarray is given by indices l and r (1-based indexing).\n\nExamples:\n\nInput: arr[] = [1, 2, 3, 4, 5, 6, 7], l = 2, r = 4\nOutput: [1, 4, 3, 2, 5, 6, 7]\nExplanation: After reversing the elements in range 2 to 4 (2, 3, 4), modified array is 1, 4, 3, 2, 5, 6, 7.\nInput: arr[] = [1, 6, 7, 4], l = 1, r = 4\nOutput: [4, 7, 6, 1]\nExplanation: After reversing the elements in range 1 to 4 (1, 6, 7, 4), modified array is 4, 7, 6, 1.\nConstraints:\n1 \u2264 arr.size() \u2264 106\n1 \u2264 arr[i] \u2264 106\n1 \u2264 l \u2264 r \u2264 arr.size()",
+    "constraints": "Use the original problem's constraints. Choose an algorithm appropriate for the stated input size; do not rely on only sample inputs.",
+    "edge_cases": [
+      "Empty or one-element input",
+      "Duplicates",
+      "First and last indices"
+    ],
+    "tests": [],
+    "auto_generated": false
   }
 ]

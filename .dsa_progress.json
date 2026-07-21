@@ -148,6 +148,21 @@
       "revision_count": 1,
       "revision_due": "2026-07-24",
       "last_revised": "2026-07-21"
+    },
+    {
+      "problem": "reverseSubArray",
+      "topic": "Arrays",
+      "topic_dir": "03_Arrays",
+      "difficulty": "Easy",
+      "path": "03_Arrays/Easy/reverseSubArray.py",
+      "patterns": [
+        "Two Pointers",
+        "Sliding Window"
+      ],
+      "updated_at": "2026-07-21T21:30:11",
+      "revision_count": 0,
+      "revision_due": "2026-07-22",
+      "last_revised": null
     }
   ]
 }

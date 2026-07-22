@@ -1,3 +1,4 @@
+# Read input, solve the problem, and print the answer.
 
 def secondLargest_element(arr):
     greatest_element = max(arr)

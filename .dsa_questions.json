@@ -627,5 +627,24 @@
     ],
     "tests": [],
     "auto_generated": false
+  },
+  {
+    "id": "greatest-element",
+    "title": "Greatest Element",
+    "source_names": [
+      "Greatest_element"
+    ],
+    "topic": "Arrays",
+    "difficulty": "Easy",
+    "prompt": "Problem: Find the Greatest Element in an Array\n\nWrite a program to find the greatest element in an array and print its value along with its zero-based index.\n\nInput Format\nThe first line contains an integer n, the number of elements in the array.\nThe second line contains n space-separated integers representing the elements of the array.\nOutput Format\n\nPrint the maximum element and its index in the following format:\n\nMax element = X found at index Y\n\nwhere:\n\nX is the maximum element in the array.\nY is the zero-based index of the maximum element.",
+    "constraints": "1 \u2264 n \u2264 10^5\n-10^9 \u2264 array[i] \u2264 10^9\nSample Input 1\n6\n2 96 69 77 145 20\nSample Output 1\nMax element = 145 found at index 4\nSample Input 2\n5\n10 23 45 67 89\nSample Output 2\nMax element = 89 found at index 4",
+    "examples": [],
+    "edge_cases": [
+      "Empty or one-element input",
+      "Duplicates",
+      "First and last indices"
+    ],
+    "tests": [],
+    "auto_generated": false
   }
 ]

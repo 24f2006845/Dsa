@@ -1,7 +1,5 @@
-from typing import List
-
 class Solution:
-    def bubbleSort(self, arr: List[int]) -> List[int]:
+    def bubbleSort(self, arr):
         n = len(arr)
         for i in range(n-2,-1,-1):
             is_swapped = False
@@ -11,5 +9,4 @@ class Solution:
                     is_swapped = True
             if is_swapped==False:
                 break
-        
         pass

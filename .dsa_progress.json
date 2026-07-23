@@ -222,6 +222,20 @@
       "revision_count": 2,
       "revision_due": "2026-07-29",
       "last_revised": "2026-07-22"
+    },
+    {
+      "problem": "selection_sort",
+      "topic": "Sorting",
+      "topic_dir": "02_Sorting",
+      "difficulty": "Easy",
+      "path": "02_Sorting/Easy/selection_sort.py",
+      "patterns": [
+        "Sorting"
+      ],
+      "updated_at": "2026-07-23T19:04:24",
+      "revision_count": 0,
+      "revision_due": "2026-07-24",
+      "last_revised": null
     }
   ]
 }

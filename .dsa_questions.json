@@ -769,5 +769,110 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "selectionSort"
+  },
+  {
+    "id": "bubble-sort",
+    "title": "Bubble Sort",
+    "source_names": [
+      "Bubble_sort"
+    ],
+    "topic": "Sorting",
+    "difficulty": "Easy",
+    "prompt": "Given an array arr, sort the array using bubble sort algorithm.",
+    "constraints": "\u2022\n1 <= arr.size() <= 103\n\u2022\n1 <= arr[i] <= 103\nInput Format\narr: List[int] - An array of integers to be sorted\nOutput Format\nList[int] - The sorted array in ascending order",
+    "examples": [
+      {
+        "label": "Example 1",
+        "input": "arr = [4, 1, 3, 9, 7]",
+        "output": "[1, 3, 4, 7, 9]",
+        "explanation": "After sorting the array using bubble sort, we get [1, 3, 4, 7, 9]."
+      },
+      {
+        "label": "Example 2",
+        "input": "arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]",
+        "output": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "explanation": "After sorting the array using bubble sort, we get [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]."
+      },
+      {
+        "label": "Example 3",
+        "input": "arr = [1, 2, 3, 4, 5]",
+        "output": "[1, 2, 3, 4, 5]",
+        "explanation": "The array is already sorted, so bubble sort returns it as is: [1, 2, 3, 4, 5]."
+      }
+    ],
+    "edge_cases": [
+      "Smallest valid input",
+      "Largest valid input",
+      "Duplicates or repeated state when allowed"
+    ],
+    "tests": [
+      {
+        "args": [
+          [
+            4,
+            1,
+            3,
+            9,
+            7
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "args": [
+          [
+            10,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "bubbleSort"
   }
 ]

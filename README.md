@@ -6,24 +6,24 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 17 |
+| Problems solved | 18 |
 | Topics touched | 3 |
 | Patterns identified | 6 |
-| Last updated | 2026-07-23 19:04 |
+| Last updated | 2026-07-23 19:29 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 3 | `[####----------------] 18%` |
-| Basics | 13 | `[###############-----] 76%` |
-| Sorting | 1 | `[#-------------------] 6%` |
+| Arrays | 3 | `[###-----------------] 17%` |
+| Basics | 13 | `[##############------] 72%` |
+| Sorting | 2 | `[##------------------] 11%` |
 
 ## Difficulty
 
 | Difficulty | Solved |
 | --- | ---: |
-| Easy | 16 |
+| Easy | 17 |
 | Medium | 1 |
 
 ## Pattern Matching
@@ -35,7 +35,7 @@ Auto-updated by `upload.py`.
 | General Problem Solving | 2 |
 | Hashing | 2 |
 | Sliding Window | 2 |
-| Sorting | 1 |
+| Sorting | 2 |
 
 ## Revision Tracker
 
@@ -43,6 +43,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
+| Bubble_sort | Sorting | 0 | Not revised yet | 2026-07-24 | Due in 1 day(s) |
 | Fibonaci_number | Basics | 1 | 2026-07-21 | 2026-07-24 | Due in 1 day(s) |
 | Palindrome_string_check | Basics | 1 | 2026-07-21 | 2026-07-24 | Due in 1 day(s) |
 | reverseSubArray | Arrays | 1 | 2026-07-21 | 2026-07-24 | Due in 1 day(s) |
@@ -65,6 +66,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-22 |
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-22 |
@@ -74,4 +76,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [factorial](01_Basics/Easy/factorial.py) | Basics | Easy | General Problem Solving | 2026-07-21 |
 | [palindrome_check](01_Basics/Easy/palindrome_check.py) | Basics | Easy | Math | 2026-07-21 |
 | [automorphic_number](01_Basics/Easy/automorphic_number.py) | Basics | Easy | Math | 2026-07-20 |
-| [Harshad_num](01_Basics/Medium/Harshad_num.py) | Basics | Medium | Math | 2026-07-12 |

@@ -236,6 +236,20 @@
       "revision_count": 2,
       "revision_due": "2026-07-30",
       "last_revised": "2026-07-23"
+    },
+    {
+      "problem": "Bubble_sort",
+      "topic": "Sorting",
+      "topic_dir": "02_Sorting",
+      "difficulty": "Easy",
+      "path": "02_Sorting/Easy/Bubble_sort.py",
+      "patterns": [
+        "Sorting"
+      ],
+      "updated_at": "2026-07-23T19:29:25",
+      "revision_count": 0,
+      "revision_due": "2026-07-24",
+      "last_revised": null
     }
   ]
 }

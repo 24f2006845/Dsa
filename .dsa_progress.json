@@ -264,6 +264,21 @@
       "revision_count": 2,
       "revision_due": "2026-07-31",
       "last_revised": "2026-07-24"
+    },
+    {
+      "problem": "leftRotatebyOne",
+      "topic": "Arrays",
+      "topic_dir": "03_Arrays",
+      "difficulty": "Medium",
+      "path": "03_Arrays/Medium/leftRotatebyOne.py",
+      "patterns": [
+        "Two Pointers",
+        "Sliding Window"
+      ],
+      "updated_at": "2026-07-24T18:38:18",
+      "revision_count": 0,
+      "revision_due": "2026-07-25",
+      "last_revised": null
     }
   ]
 }

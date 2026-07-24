@@ -954,5 +954,26 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "moveZeros"
+  },
+  {
+    "id": "movezero-withoutspace",
+    "title": "Movezero Withoutspace",
+    "source_names": [
+      "MoveZero_withoutSpace"
+    ],
+    "topic": "Arrays",
+    "difficulty": "Hard",
+    "prompt": "You are given an array containing only 0s and 1s. Your task is to move all the 0s to the end of the array.\n\nNote: You must modify the original array in-place, i.e., do not use any extra space.\n\nInput Format\nThe first line contains an integer N, the number of elements in the array.\nThe second line contains N space-separated integers (0 or 1), representing the array elements.\nOutput Format\nPrint the modified array with all 0s moved to the end, separated by spaces.\n\nFor JavaScript: Do not return a new array. Modify the original array in-place.",
+    "constraints": "1 \u2264 N \u2264 10^5\nThe array contains only 0s and 1s.\nSample Input 1\n5\n0 1 0 1 1\nSample Output 1\n1 1 1 0 0\nSample Input 2\n6\n1 0 1 0 1 0\nSample Output 2\n1 1 1 0 0 0",
+    "examples": [],
+    "edge_cases": [
+      "Empty or one-element input",
+      "Duplicates",
+      "First and last indices"
+    ],
+    "tests": [],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "moveZeros"
   }
 ]

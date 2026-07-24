@@ -293,6 +293,20 @@
       "revision_count": 2,
       "revision_due": "2026-07-31",
       "last_revised": "2026-07-24"
+    },
+    {
+      "problem": "MoveZero_withoutSpace",
+      "topic": "Arrays",
+      "topic_dir": "03_Arrays",
+      "difficulty": "Hard",
+      "path": "03_Arrays/Hard/MoveZero_withoutSpace.py",
+      "patterns": [
+        "General Problem Solving"
+      ],
+      "updated_at": "2026-07-24T20:21:25",
+      "revision_count": 0,
+      "revision_due": "2026-07-25",
+      "last_revised": null
     }
   ]
 }

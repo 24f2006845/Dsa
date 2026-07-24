@@ -6,17 +6,17 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 21 |
+| Problems solved | 22 |
 | Topics touched | 3 |
 | Patterns identified | 7 |
-| Last updated | 2026-07-24 19:12 |
+| Last updated | 2026-07-24 20:21 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 5 | `[#####---------------] 24%` |
-| Basics | 13 | `[############--------] 62%` |
+| Arrays | 6 | `[#####---------------] 27%` |
+| Basics | 13 | `[############--------] 59%` |
 | Sorting | 3 | `[###-----------------] 14%` |
 
 ## Difficulty
@@ -24,6 +24,7 @@ Auto-updated by `upload.py`.
 | Difficulty | Solved |
 | --- | ---: |
 | Easy | 19 |
+| Hard | 1 |
 | Medium | 2 |
 
 ## Pattern Matching
@@ -32,9 +33,9 @@ Auto-updated by `upload.py`.
 | --- | ---: |
 | Math | 10 |
 | Two Pointers | 5 |
+| General Problem Solving | 3 |
 | Sliding Window | 3 |
 | Sorting | 3 |
-| General Problem Solving | 2 |
 | Hashing | 2 |
 | Stack | 1 |
 
@@ -44,6 +45,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
+| MoveZero_withoutSpace | Arrays | 0 | Not revised yet | 2026-07-25 | Due in 1 day(s) |
 | second_largest_element | Arrays | 2 | 2026-07-22 | 2026-07-29 | Due in 5 day(s) |
 | Greatest_element | Arrays | 2 | 2026-07-22 | 2026-07-29 | Due in 5 day(s) |
 | check_prime | Basics | 3 | Before tracking | 2026-07-29 | Due in 5 day(s) |
@@ -70,6 +72,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [MoveZero_withoutSpace](03_Arrays/Hard/MoveZero_withoutSpace.py) | Arrays | Hard | General Problem Solving | 2026-07-24 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-24 |
 | [leftRotatebyOne](03_Arrays/Medium/leftRotatebyOne.py) | Arrays | Medium | Two Pointers, Sliding Window | 2026-07-24 |
 | [insertion_Sort](02_Sorting/Easy/insertion_Sort.py) | Sorting | Easy | Sorting | 2026-07-24 |
@@ -79,4 +82,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-22 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-21 |
 | [Palindrome_string_check](01_Basics/Easy/Palindrome_string_check.py) | Basics | Easy | Two Pointers, Sliding Window | 2026-07-21 |
-| [reverseSubArray](03_Arrays/Easy/reverseSubArray.py) | Arrays | Easy | Two Pointers, Sliding Window | 2026-07-21 |

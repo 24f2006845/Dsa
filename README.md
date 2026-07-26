@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 22 |
 | Topics touched | 3 |
 | Patterns identified | 7 |
-| Last updated | 2026-07-26 18:31 |
+| Last updated | 2026-07-26 18:32 |
 
 ## Topic Progress
 
@@ -45,7 +45,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| second_largest_element | Arrays | 2 | 2026-07-22 | 2026-07-29 | Due in 3 day(s) |
 | Bubble_sort | Sorting | 2 | 2026-07-23 | 2026-07-30 | Due in 4 day(s) |
 | selection_sort | Sorting | 2 | 2026-07-23 | 2026-07-30 | Due in 4 day(s) |
 | Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
@@ -60,6 +59,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 9 day(s) |
+| second_largest_element | Arrays | 3 | 2026-07-26 | 2026-08-09 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 22 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 22 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 24 day(s) |
@@ -72,6 +72,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [Check_prime_num](01_Basics/Easy/Check_prime_num.py) | Basics | Easy | Math | 2026-07-26 |
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [MoveZero_withoutSpace](03_Arrays/Hard/MoveZero_withoutSpace.py) | Arrays | Hard | General Problem Solving | 2026-07-25 |
@@ -80,5 +81,4 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [insertion_Sort](02_Sorting/Easy/insertion_Sort.py) | Sorting | Easy | Sorting | 2026-07-24 |
 | [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
-| [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-22 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-21 |

@@ -91,9 +91,10 @@
       "patterns": [
         "Math"
       ],
-      "updated_at": "2026-07-12T17:02:24",
-      "revision_count": 3,
-      "revision_due": "2026-08-01"
+      "updated_at": "2026-07-26T18:31:14",
+      "revision_count": 4,
+      "revision_due": "2026-08-25",
+      "last_revised": "2026-07-26"
     },
     {
       "problem": "Check_strong_num",

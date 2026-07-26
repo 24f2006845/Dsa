@@ -58,7 +58,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | factorial | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due in 6 day(s) |
 | Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due in 6 day(s) |
-| Check_prime_num | Basics | 3 | Before tracking | 2026-08-01 | Due in 6 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 9 day(s) |
@@ -66,12 +65,14 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 22 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 24 day(s) |
 | palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 25 day(s) |
+| Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
 | Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
 
 ## Recently Solved
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [Check_prime_num](01_Basics/Easy/Check_prime_num.py) | Basics | Easy | Math | 2026-07-26 |
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [MoveZero_withoutSpace](03_Arrays/Hard/MoveZero_withoutSpace.py) | Arrays | Hard | General Problem Solving | 2026-07-25 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-24 |
@@ -81,4 +82,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-22 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-21 |
-| [Palindrome_string_check](01_Basics/Easy/Palindrome_string_check.py) | Basics | Easy | Two Pointers, Sliding Window | 2026-07-21 |

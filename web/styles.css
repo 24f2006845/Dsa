@@ -43,6 +43,13 @@ button {
   max-width: 710px;
   margin-bottom: 28px;
 }
+.top-nav { align-items: center; display: flex; justify-content: space-between; gap: 16px; }
+.top-nav .eyebrow { margin: 0; }
+.nav-link, .back-link { color: var(--leaf-dark); font-size: .86rem; font-weight: 800; text-decoration: none; }
+.nav-link { background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 999px; padding: 9px 13px; }
+.nav-link:hover, .back-link:hover { color: var(--amber); }
+.interview-cta { background: var(--leaf); border-radius: 10px; color: white; display: inline-flex; font-size: .9rem; font-weight: 800; gap: 10px; margin-top: 21px; padding: 12px 15px; text-decoration: none; }
+.interview-cta:hover { background: var(--leaf-dark); }
 .hero h1 {
   font-family: Georgia, serif;
   font-size: clamp(2.35rem, 6vw, 4.4rem);
@@ -364,6 +371,30 @@ textarea {
   margin-top: 9px;
   padding-top: 9px;
 }
+.interview-body { background: #f4f6f0; }
+.interview-shell { margin: 0 auto; max-width: 1340px; padding: 28px 32px 64px; }
+.interview-header { align-items: center; display: flex; justify-content: space-between; min-height: 44px; }
+.interview-brand { color: var(--leaf-dark); font-size: .73rem; font-weight: 850; letter-spacing: .12em; }
+.status-dot { background: #55b87b; border-radius: 100%; display: inline-block; height: 8px; margin-right: 7px; width: 8px; }
+.timer { background: #172a20; border-radius: 9px; color: #e5f5e8; font-family: ui-monospace, monospace; font-size: 1.05rem; font-weight: 800; padding: 10px 14px; }
+.interview-lobby { margin: 13vh auto 0; max-width: 720px; text-align: center; }
+.interview-lobby h1 { font-family: Georgia, serif; font-size: clamp(2.8rem, 7vw, 5.4rem); letter-spacing: -.055em; line-height: .96; margin: 10px 0 21px; }
+.interview-lobby > p:not(.eyebrow) { color: var(--muted); font-size: 1.08rem; line-height: 1.7; margin: 0 auto; max-width: 650px; }
+.setup-card { background: #fffef9; border: 1px solid var(--line); border-radius: 17px; box-shadow: var(--shadow); display: grid; gap: 13px; grid-template-columns: repeat(3, 1fr); margin-top: 36px; padding: 17px; text-align: left; }
+.setup-card label { color: var(--muted); display: grid; font-size: .76rem; font-weight: 750; gap: 6px; }
+.setup-card select { background: white; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 10px; }
+.start-interview { grid-column: 1 / -1; padding: 13px; }
+.interview-lobby #lobbyMessage { margin-top: 14px; }
+.interview-room { display: grid; gap: 26px; grid-template-columns: 260px minmax(0, 1fr); margin-top: 45px; }
+.interviewer-panel { align-self: start; background: #173328; border-radius: 16px; color: white; padding: 24px; position: sticky; top: 20px; }
+.interviewer-avatar { align-items: center; background: #e8a43c; border-radius: 50%; color: #2b2a20; display: flex; font-family: Georgia, serif; font-size: 1.3rem; font-weight: bold; height: 45px; justify-content: center; margin-bottom: 15px; width: 45px; }
+.interviewer-panel .eyebrow { color: #a7d6b3; }.interviewer-panel h2 { font-family: Georgia, serif; margin: 0; }.interviewer-panel .muted { color: #c2d2c6; font-size: .86rem; margin: 4px 0 20px; }
+.interviewer-message { border-bottom: 1px solid rgba(255,255,255,.16); border-top: 1px solid rgba(255,255,255,.16); color: #f3f8f1; font-size: .9rem; line-height: 1.55; padding: 17px 0; }
+.interview-steps { display: grid; gap: 13px; margin: 22px 0; }.interview-steps div { color: #a8b9ac; font-size: .84rem; font-weight: 700; }.interview-steps span { border: 1px solid #6a8273; border-radius: 50%; display: inline-grid; height: 21px; margin-right: 8px; place-items: center; width: 21px; }.interview-steps .active { color: white; }.interview-steps .active span { background: #e8a43c; border-color: #e8a43c; color: #293127; }
+.end-button { background: transparent; border: 1px solid #789081; border-radius: 8px; color: #fff; font-weight: 700; padding: 9px; width: 100%; }
+.interview-workspace { background: #fffef9; border: 1px solid var(--line); border-radius: 17px; box-shadow: var(--shadow); padding: clamp(22px, 4vw, 46px); }.question-toolbar, .coding-heading, .interview-actions { align-items: center; display: flex; gap: 12px; justify-content: space-between; }.question-toolbar { border-bottom: 1px solid var(--line); padding-bottom: 17px; }.question-toolbar .muted { margin-right: auto; }.interview-workspace h1 { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -.04em; line-height: 1; margin: 27px 0 16px; }.interview-prompt { font-size: 1.03rem; line-height: 1.7; margin-bottom: 22px; white-space: pre-line; }
+.constraints-box { background: #f1f5ee; border-radius: 10px; color: #435348; font-size: .9rem; line-height: 1.5; margin: 19px 0; padding: 13px 15px; }.constraints-box summary { color: var(--leaf-dark); cursor: pointer; font-weight: 800; }.constraints-box p { margin-bottom: 8px; white-space: pre-line; }.constraints-box ul { margin: 0; padding-left: 19px; }
+.response-section { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 25px; }.response-section label, .coding-heading label { font-size: .92rem; font-weight: 800; }.approach-editor { background: #f6f8f3; border: 1px solid #dce5d8; color: var(--ink); min-height: 130px; margin: 10px 0; }.coding-section { margin-top: 26px; }.coding-heading { margin-bottom: 10px; }.coding-section textarea { min-height: 330px; }.interview-actions { justify-content: flex-end; margin-top: 16px; }.interview-summary { background: #eef6eb; border: 1px solid #cce0c9; border-radius: 12px; margin-top: 30px; padding: 28px; }.interview-summary h2 { font-family: Georgia, serif; font-size: 2rem; margin: 5px 0; }.summary-list { display: grid; gap: 8px; margin: 20px 0; }.summary-list div { align-items: center; background: white; border-radius: 7px; display: flex; justify-content: space-between; padding: 11px; }.summary-list span { color: var(--muted); font-size: .86rem; }
 @media (max-width: 800px) {
   .page-shell {
     padding-top: 32px;
@@ -383,4 +414,5 @@ textarea {
   .hero h1 {
     font-size: 2.75rem;
   }
+  .interview-shell { padding: 18px 16px 42px; }.interview-brand { display: none; }.setup-card, .interview-room { grid-template-columns: 1fr; }.interview-lobby { margin-top: 10vh; }.interviewer-panel { position: static; }.interviewer-message { display: none; }.interview-steps { grid-template-columns: repeat(4, 1fr); gap: 5px; }.interview-steps div { font-size: 0; }.interview-steps span { font-size: .75rem; }.question-toolbar { align-items: flex-start; flex-wrap: wrap; }.question-toolbar .muted { margin-right: 0; }.interview-workspace { padding: 22px; }
 }

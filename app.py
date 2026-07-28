@@ -357,6 +357,11 @@ class DSAHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def end_headers(self) -> None:
+        """Keep local UI assets fresh while they are being edited."""
+        self.send_header("Cache-Control", "no-store, max-age=0")
+        super().end_headers()
+
     def read_json(self) -> dict:
         length = int(self.headers.get("Content-Length", "0"))
         return json.loads(self.rfile.read(length).decode("utf-8"))

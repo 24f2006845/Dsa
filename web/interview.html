@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Mode · DSA Revision Manager</title>
+    <link rel="stylesheet" href="styles.css?v=interview-mode-2" />
+  </head>
+  <body class="interview-body">
+    <main class="interview-shell">
+      <header class="interview-header">
+        <a class="back-link" href="index.html">← Back to study space</a>
+        <div class="interview-brand"><span class="status-dot"></span> LIVE PRACTICE INTERVIEW</div>
+        <div id="timer" class="timer" aria-label="Time remaining">45:00</div>
+      </header>
+
+      <section id="interviewLobby" class="interview-lobby">
+        <p class="eyebrow">SIMULATE THE REAL THING</p>
+        <h1>Ready to think out loud?</h1>
+        <p>Choose a focus and I’ll conduct a structured DSA interview: clarify the problem, explain your approach, code it, and review the trade-offs.</p>
+        <form id="interviewSetup" class="setup-card">
+          <label>Focus area<select id="interviewTopic"><option value="">Any topic</option></select></label>
+          <label>Difficulty<select id="interviewDifficulty"><option value="">Mixed difficulty</option><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
+          <label>Interview length<select id="interviewLength"><option value="30">30 minutes</option><option value="45" selected>45 minutes</option><option value="60">60 minutes</option></select></label>
+          <button class="primary-button start-interview" type="submit">Start interview <span aria-hidden="true">→</span></button>
+        </form>
+        <p id="lobbyMessage" class="muted"></p>
+      </section>
+
+      <section id="interviewRoom" class="interview-room hidden">
+        <aside class="interviewer-panel">
+          <div class="interviewer-avatar" aria-hidden="true">I</div>
+          <div><p class="eyebrow">YOUR INTERVIEWER</p><h2>Alex</h2><p class="muted">Senior Software Engineer</p></div>
+          <div id="interviewerMessage" class="interviewer-message"></div>
+          <div class="interview-steps" aria-label="Interview progress">
+            <div class="active"><span>1</span> Understand</div>
+            <div><span>2</span> Approach</div>
+            <div><span>3</span> Code</div>
+            <div><span>4</span> Review</div>
+          </div>
+          <button id="endInterview" class="end-button">End interview</button>
+        </aside>
+        <div class="interview-workspace">
+          <div class="question-toolbar"><span id="questionPill" class="tag"></span><span id="questionCounter" class="muted"></span><button id="hintButton" class="quiet-button">Ask for a hint</button></div>
+          <h1 id="interviewTitle"></h1>
+          <p id="interviewPrompt" class="interview-prompt"></p>
+          <div id="interviewExamples" class="sample-tests"></div>
+          <details class="constraints-box"><summary>Constraints &amp; edge cases</summary><p id="interviewConstraints"></p><ul id="interviewEdges"></ul></details>
+          <div class="response-section"><label for="approachEditor">Explain your approach before coding</label><textarea id="approachEditor" class="approach-editor" placeholder="Talk through your data structure, algorithm, and complexity…"></textarea><button id="confirmApproach" class="secondary-button">Share approach</button></div>
+          <div id="codingSection" class="coding-section hidden"><div class="coding-heading"><label for="interviewCode">Implement your solution</label><button id="runInterviewTests" class="primary-button">Run tests</button></div><textarea id="interviewCode" spellcheck="false"></textarea><div id="interviewResults" class="test-results muted">Run the tests when you are ready.</div><div class="interview-actions"><button id="nextQuestion" class="secondary-button hidden">Next question →</button><button id="finishInterview" class="primary-button">Finish interview</button></div></div>
+          <section id="interviewSummary" class="interview-summary hidden"></section>
+        </div>
+      </section>
+    </main>
+    <script src="interview.js"></script>
+  </body>
+</html>

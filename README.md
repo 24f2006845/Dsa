@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 22 |
 | Topics touched | 3 |
 | Patterns identified | 7 |
-| Last updated | 2026-07-29 22:25 |
+| Last updated | 2026-07-29 22:26 |
 
 ## Topic Progress
 
@@ -64,7 +64,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
 | Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
 | check_prime | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
-| Fibonaci_number | Basics | 4 | 2026-07-29 | 2026-08-28 | Due in 30 day(s) |
+| Fibonaci_number | Basics | 5 | 2026-07-29 | 2026-08-28 | Due in 30 day(s) |
 | selection_sort | Sorting | 4 | 2026-07-29 | 2026-08-28 | Due in 30 day(s) |
 | Bubble_sort | Sorting | 4 | 2026-07-29 | 2026-08-28 | Due in 30 day(s) |
 

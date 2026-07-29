@@ -58,7 +58,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 5 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 5 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 6 day(s) |
-| Bubble_sort | Sorting | 3 | 2026-07-29 | 2026-08-12 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 19 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 19 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 21 day(s) |
@@ -67,6 +66,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
 | Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
 | check_prime | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
+| Bubble_sort | Sorting | 4 | 2026-07-29 | 2026-08-28 | Due in 30 day(s) |
 
 ## Recently Solved
 

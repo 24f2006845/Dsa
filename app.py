@@ -65,13 +65,18 @@ def git_sync(files: list[Path], message: str) -> str:
             ["git", "diff", "--cached", "--quiet", "--", *relative_files], cwd=ROOT, check=False
         )
         if staged.returncode == 0:
-            return "No new Git changes to commit."
+            # A previous request can have created a local commit but failed while
+            # pushing (for example, when the network briefly drops).  Still try
+            # to publish it before telling the UI that everything is up to date.
+            run("git", "push")
+            return "No new file changes; GitHub is synced."
         if staged.returncode != 1:
             raise ValueError("Git could not inspect the staged changes.")
         # --only prevents unrelated files already staged by the user from being committed.
         run("git", "commit", "--only", "-m", message, "--", *relative_files)
         run("git", "push")
-    return "Committed and pushed to GitHub."
+        commit = run("git", "rev-parse", "--short", "HEAD").stdout.strip()
+    return f"Committed and pushed to GitHub ({commit})."
 
 
 def folder_questions() -> list[dict]:

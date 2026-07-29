@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 22 |
 | Topics touched | 3 |
 | Patterns identified | 7 |
-| Last updated | 2026-07-26 18:32 |
+| Last updated | 2026-07-29 22:24 |
 
 ## Topic Progress
 
@@ -45,33 +45,34 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| Bubble_sort | Sorting | 2 | 2026-07-23 | 2026-07-30 | Due in 4 day(s) |
-| selection_sort | Sorting | 2 | 2026-07-23 | 2026-07-30 | Due in 4 day(s) |
-| Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| Fibonaci_number | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| Palindrome_string_check | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| reverseSubArray | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| factorial | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 5 day(s) |
-| MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due in 6 day(s) |
-| Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due in 6 day(s) |
-| Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
-| Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 8 day(s) |
-| sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 9 day(s) |
-| Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 22 day(s) |
-| Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 22 day(s) |
-| automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 24 day(s) |
-| palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 25 day(s) |
-| second_largest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
-| Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
-| Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
-| check_prime | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 30 day(s) |
+| selection_sort | Sorting | 2 | 2026-07-23 | 2026-07-30 | Due in 1 day(s) |
+| Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| Fibonaci_number | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| Palindrome_string_check | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| reverseSubArray | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| factorial | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 2 day(s) |
+| MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due in 3 day(s) |
+| Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due in 3 day(s) |
+| Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 5 day(s) |
+| Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 5 day(s) |
+| sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 6 day(s) |
+| Bubble_sort | Sorting | 3 | 2026-07-29 | 2026-08-12 | Due in 14 day(s) |
+| Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 19 day(s) |
+| Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 19 day(s) |
+| automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 21 day(s) |
+| palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 22 day(s) |
+| second_largest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
+| Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
+| Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
+| check_prime | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 27 day(s) |
 
 ## Recently Solved
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-29 |
 | [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [Check_prime_num](01_Basics/Easy/Check_prime_num.py) | Basics | Easy | Math | 2026-07-26 |
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
@@ -79,6 +80,5 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-24 |
 | [leftRotatebyOne](03_Arrays/Medium/leftRotatebyOne.py) | Arrays | Medium | Two Pointers, Sliding Window | 2026-07-24 |
 | [insertion_Sort](02_Sorting/Easy/insertion_Sort.py) | Sorting | Easy | Sorting | 2026-07-24 |
-| [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-23 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-21 |

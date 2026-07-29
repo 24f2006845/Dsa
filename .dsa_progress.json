@@ -248,10 +248,10 @@
       "patterns": [
         "Sorting"
       ],
-      "updated_at": "2026-07-23T19:30:58",
-      "revision_count": 2,
-      "revision_due": "2026-07-30",
-      "last_revised": "2026-07-23"
+      "updated_at": "2026-07-29T22:24:44",
+      "revision_count": 3,
+      "revision_due": "2026-08-12",
+      "last_revised": "2026-07-29"
     },
     {
       "problem": "insertion_Sort",

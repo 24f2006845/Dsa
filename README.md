@@ -45,7 +45,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| SortArrayByParity | Arrays | 0 | Not revised yet | 2026-07-31 | Due in 1 day(s) |
 | Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
 | leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
 | insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
@@ -54,6 +53,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | factorial | Basics | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due in 2 day(s) |
 | Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due in 2 day(s) |
+| SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 3 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 4 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 4 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 5 day(s) |

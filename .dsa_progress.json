@@ -309,6 +309,21 @@
       "revision_count": 2,
       "revision_due": "2026-08-01",
       "last_revised": "2026-07-25"
+    },
+    {
+      "problem": "SortArrayByParity",
+      "topic": "Arrays",
+      "topic_dir": "03_Arrays",
+      "difficulty": "Easy",
+      "path": "03_Arrays/Easy/SortArrayByParity.py",
+      "patterns": [
+        "Sorting",
+        "Math"
+      ],
+      "updated_at": "2026-07-30T08:35:07",
+      "revision_count": 0,
+      "revision_due": "2026-07-31",
+      "last_revised": null
     }
   ]
 }

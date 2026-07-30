@@ -1,12 +1,11 @@
 class Solution:
-    def bubbleSort(self, arr):
+    def bubbleSort(self,arr):
         n = len(arr)
-        for i in range(n-2,-1,-1):
-            is_swapped = False
-            for j in range(0,i+1):
+        for i in range(n):
+            isSwap = False
+            for j in range(0,n-1):
                 if arr[j]>arr[j+1]:
-                    arr[j],arr[j+1] = arr[j+1],arr[j]
-                    is_swapped = True
-            if is_swapped==False:
+                    arr[j],arr[j+1]= arr[j+1],arr[j]
+                    isSwap = True
+            if not isSwap:
                 break
-        pass

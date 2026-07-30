@@ -6,18 +6,18 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 23 |
+| Problems solved | 24 |
 | Topics touched | 3 |
-| Patterns identified | 7 |
-| Last updated | 2026-07-30 08:35 |
+| Patterns identified | 8 |
+| Last updated | 2026-07-30 09:47 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 7 | `[######--------------] 30%` |
-| Basics | 13 | `[###########---------] 57%` |
-| Sorting | 3 | `[###-----------------] 13%` |
+| Arrays | 7 | `[######--------------] 29%` |
+| Basics | 13 | `[###########---------] 54%` |
+| Sorting | 4 | `[###-----------------] 17%` |
 
 ## Difficulty
 
@@ -25,18 +25,19 @@ Auto-updated by `upload.py`.
 | --- | ---: |
 | Easy | 20 |
 | Hard | 1 |
-| Medium | 2 |
+| Medium | 3 |
 
 ## Pattern Matching
 
 | Pattern | Problems |
 | --- | ---: |
 | Math | 11 |
+| Sorting | 5 |
 | Two Pointers | 5 |
-| Sorting | 4 |
 | General Problem Solving | 3 |
 | Sliding Window | 3 |
 | Hashing | 2 |
+| Binary Search | 1 |
 | Stack | 1 |
 
 ## Revision Tracker
@@ -45,6 +46,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
+| 75:Leetcode:Sort Colors | Sorting | 0 | Not revised yet | 2026-07-31 | Due in 1 day(s) |
 | Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
 | leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
 | insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due in 1 day(s) |
@@ -73,6 +75,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-30 |
 | [SortArrayByParity](03_Arrays/Easy/SortArrayByParity.py) | Arrays | Easy | Sorting, Math | 2026-07-30 |
 | [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-30 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-29 |
@@ -82,4 +85,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [MoveZero_withoutSpace](03_Arrays/Hard/MoveZero_withoutSpace.py) | Arrays | Hard | General Problem Solving | 2026-07-25 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-24 |
-| [leftRotatebyOne](03_Arrays/Medium/leftRotatebyOne.py) | Arrays | Medium | Two Pointers, Sliding Window | 2026-07-24 |

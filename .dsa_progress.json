@@ -324,6 +324,21 @@
       "revision_count": 1,
       "revision_due": "2026-08-02",
       "last_revised": "2026-07-30"
+    },
+    {
+      "problem": "75:Leetcode:Sort Colors",
+      "topic": "Sorting",
+      "topic_dir": "02_Sorting",
+      "difficulty": "Medium",
+      "path": "02_Sorting/Medium/75_Leetcode_Sort_Colors.py",
+      "patterns": [
+        "Binary Search",
+        "Sorting"
+      ],
+      "updated_at": "2026-07-30T09:47:40",
+      "revision_count": 0,
+      "revision_due": "2026-07-31",
+      "last_revised": null
     }
   ]
 }

@@ -1035,5 +1035,72 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "sortArrayByParity"
+  },
+  {
+    "id": "75-leetcode-sort-colors",
+    "title": "75:Leetcode:Sort Colors",
+    "source_names": [
+      "75:Leetcode:Sort Colors"
+    ],
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "prompt": "Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\n\nWe will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.\n\nYou must solve this problem without using the library's sort function.",
+    "constraints": "n == nums.length\n1 <= n <= 300\nnums[i] is either 0, 1, or 2.\nFollow up: Could you come up with a one-pass algorithm(dutch flag algo) using only constant extra space?",
+    "examples": [
+      {
+        "label": "Example 1",
+        "input": "nums = [2,0,2,1,1,0]",
+        "output": "[0,0,1,1,2,2]"
+      },
+      {
+        "label": "Example 2",
+        "input": "nums = [2,0,1]",
+        "output": "[0,1,2]"
+      }
+    ],
+    "edge_cases": [
+      "Smallest valid input",
+      "Largest valid input",
+      "Duplicates or repeated state when allowed"
+    ],
+    "tests": [
+      {
+        "args": [
+          [
+            2,
+            0,
+            2,
+            1,
+            1,
+            0
+          ]
+        ],
+        "expected": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "expected": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "sortColors"
   }
 ]

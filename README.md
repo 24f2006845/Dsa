@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 25 |
 | Topics touched | 3 |
 | Patterns identified | 8 |
-| Last updated | 2026-07-31 17:53 |
+| Last updated | 2026-07-31 18:49 |
 
 ## Topic Progress
 
@@ -47,7 +47,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
 | 75:Leetcode:Sort Colors | Sorting | 0 | Not revised yet | 2026-07-31 | Due today |
-| Move_zeroUsingSpace | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | Palindrome_string_check | Basics | 2 | 2026-07-24 | 2026-07-31 | Due today |
@@ -60,6 +59,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 4 day(s) |
+| Move_zeroUsingSpace | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 17 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 17 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 19 day(s) |
@@ -76,6 +76,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-31 |
 | [88_merge_sort_array](02_Sorting/Medium/88_merge_sort_array.py) | Sorting | Medium | Sorting | 2026-07-31 |
 | [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-30 |
 | [SortArrayByParity](03_Arrays/Easy/SortArrayByParity.py) | Arrays | Easy | Sorting, Math | 2026-07-30 |
@@ -85,4 +86,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
 | [Check_prime_num](01_Basics/Easy/Check_prime_num.py) | Basics | Easy | Math | 2026-07-26 |
 | [Greatest_element](03_Arrays/Easy/Greatest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
-| [MoveZero_withoutSpace](03_Arrays/Hard/MoveZero_withoutSpace.py) | Arrays | Hard | General Problem Solving | 2026-07-25 |

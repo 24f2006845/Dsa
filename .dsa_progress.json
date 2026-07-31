@@ -291,10 +291,10 @@
       "patterns": [
         "Stack"
       ],
-      "updated_at": "2026-07-24T19:12:42",
-      "revision_count": 2,
-      "revision_due": "2026-07-31",
-      "last_revised": "2026-07-24"
+      "updated_at": "2026-07-31T18:49:56",
+      "revision_count": 3,
+      "revision_due": "2026-08-14",
+      "last_revised": "2026-07-31"
     },
     {
       "problem": "MoveZero_withoutSpace",

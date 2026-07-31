@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 25 |
 | Topics touched | 3 |
 | Patterns identified | 8 |
-| Last updated | 2026-07-31 18:49 |
+| Last updated | 2026-07-31 18:50 |
 
 ## Topic Progress
 
@@ -49,7 +49,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | 75:Leetcode:Sort Colors | Sorting | 0 | Not revised yet | 2026-07-31 | Due today |
 | leftRotatebyOne | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | insertion_Sort | Sorting | 2 | 2026-07-24 | 2026-07-31 | Due today |
-| Palindrome_string_check | Basics | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | reverseSubArray | Arrays | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | factorial | Basics | 2 | 2026-07-24 | 2026-07-31 | Due today |
 | 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due in 1 day(s) |
@@ -59,6 +58,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 4 day(s) |
+| Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 17 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 17 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 19 day(s) |

@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 25 |
 | Topics touched | 3 |
 | Patterns identified | 8 |
-| Last updated | 2026-07-31 18:51 |
+| Last updated | 2026-07-31 18:54 |
 
 ## Topic Progress
 
@@ -46,11 +46,11 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| 75:Leetcode:Sort Colors | Sorting | 0 | Not revised yet | 2026-07-31 | Due today |
 | 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due in 1 day(s) |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due in 1 day(s) |
 | Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due in 1 day(s) |
 | SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 2 day(s) |
+| 75:Leetcode:Sort Colors | Sorting | 1 | 2026-07-31 | 2026-08-03 | Due in 3 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 3 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 4 day(s) |
@@ -76,9 +76,9 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-31 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-31 |
 | [88_merge_sort_array](02_Sorting/Medium/88_merge_sort_array.py) | Sorting | Medium | Sorting | 2026-07-31 |
-| [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-30 |
 | [SortArrayByParity](03_Arrays/Easy/SortArrayByParity.py) | Arrays | Easy | Sorting, Math | 2026-07-30 |
 | [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-30 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-29 |

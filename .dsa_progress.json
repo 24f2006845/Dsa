@@ -339,6 +339,20 @@
       "revision_count": 0,
       "revision_due": "2026-07-31",
       "last_revised": null
+    },
+    {
+      "problem": "88_merge_sort_array",
+      "topic": "Sorting",
+      "topic_dir": "02_Sorting",
+      "difficulty": "Medium",
+      "path": "02_Sorting/Medium/88_merge_sort_array.py",
+      "patterns": [
+        "Sorting"
+      ],
+      "updated_at": "2026-07-31T17:53:48",
+      "revision_count": 0,
+      "revision_due": "2026-08-01",
+      "last_revised": null
     }
   ]
 }

@@ -1102,5 +1102,101 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "sortColors"
+  },
+  {
+    "id": "88-merge-sort-array",
+    "title": "88 Merge Sort Array",
+    "source_names": [
+      "88_merge_sort_array"
+    ],
+    "topic": "Sorting",
+    "difficulty": "Medium",
+    "prompt": "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\n\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\n\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.",
+    "constraints": "nums1.length == m + n\nnums2.length == n\n0 <= m, n <= 200\n1 <= m + n <= 200\n-109 <= nums1[i], nums2[j] <= 109\nFollow up: Can you come up with an algorithm that runs in O(m + n) time?",
+    "examples": [
+      {
+        "label": "Example 1",
+        "input": "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3",
+        "output": "[1,2,2,3,5,6]",
+        "explanation": "The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1."
+      },
+      {
+        "label": "Example 2",
+        "input": "nums1 = [1], m = 1, nums2 = [], n = 0",
+        "output": "[1]",
+        "explanation": "The arrays we are merging are [1] and [].\nThe result of the merge is [1]."
+      },
+      {
+        "label": "Example 3",
+        "input": "nums1 = [0], m = 0, nums2 = [1], n = 1",
+        "output": "[1]",
+        "explanation": "The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1."
+      }
+    ],
+    "edge_cases": [
+      "Smallest valid input",
+      "Largest valid input",
+      "Duplicates or repeated state when allowed"
+    ],
+    "tests": [
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            0,
+            0,
+            0
+          ],
+          3,
+          [
+            2,
+            5,
+            6
+          ],
+          3
+        ],
+        "expected": [
+          1,
+          2,
+          2,
+          3,
+          5,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            1
+          ],
+          1,
+          [],
+          0
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ],
+          0,
+          [
+            1
+          ],
+          1
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "merge"
   }
 ]

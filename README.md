@@ -48,7 +48,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | check_anagram_str | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
 | captilize_first_and_last_char | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
 | 88_merge_sort_array | Sorting | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
@@ -75,6 +74,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Move_zeroUsingSpace | Arrays | 4 | 2026-07-31 | 2026-08-30 | Due in 29 day(s) |
 | Harshad_num | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 30 day(s) |
 | Armstrong_check | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 30 day(s) |
+| Factor_all_num | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 30 day(s) |
 
 ## Recently Solved
 

@@ -1217,5 +1217,26 @@
     ],
     "tests": [],
     "auto_generated": false
+  },
+  {
+    "id": "check-anagram-str",
+    "title": "Check Anagram Str",
+    "source_names": [
+      "check_anagram_str"
+    ],
+    "topic": "Strings",
+    "difficulty": "Easy",
+    "prompt": "Given two strings s and t, determine whether they are anagrams of each other.\n\nTwo strings are considered anagrams if:\n\nThey contain the same characters.\nEach character appears the same number of times.\nThe order of characters does not matter.\n\nReturn true if the strings are anagrams; otherwise, return false.\n\nInput Format\nThe first line contains an integer T, the number of test cases.\nFor each test case:\nThe first line contains string s.\nThe second line contains string t.\nOutput Format\n\nFor each test case, print:\n\ntrue if s and t are anagrams.\nfalse otherwise.",
+    "constraints": "1 \u2264 T \u2264 100\n1 \u2264 |s|, |t| \u2264 10^5\ns and t contain only lowercase English letters.\nThe sum of lengths of all strings does not exceed 10^6.\nSample Input\n2\narc\ncar\nchai\nshai\nSample Output\ntrue\nfalse",
+    "examples": [],
+    "edge_cases": [
+      "Empty input",
+      "One character",
+      "Repeated characters"
+    ],
+    "tests": [],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "frequency"
   }
 ]

@@ -6,25 +6,25 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 26 |
+| Problems solved | 27 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-01 10:05 |
+| Last updated | 2026-08-01 11:03 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 7 | `[#####---------------] 27%` |
-| Basics | 13 | `[##########----------] 50%` |
+| Arrays | 7 | `[#####---------------] 26%` |
+| Basics | 13 | `[##########----------] 48%` |
 | Sorting | 5 | `[####----------------] 19%` |
-| Strings | 1 | `[#-------------------] 4%` |
+| Strings | 2 | `[#-------------------] 7%` |
 
 ## Difficulty
 
 | Difficulty | Solved |
 | --- | ---: |
-| Easy | 20 |
+| Easy | 21 |
 | Hard | 1 |
 | Medium | 5 |
 
@@ -36,11 +36,11 @@ Auto-updated by `upload.py`.
 | Sorting | 6 |
 | Two Pointers | 5 |
 | General Problem Solving | 3 |
+| Hashing | 3 |
 | Sliding Window | 3 |
-| Hashing | 2 |
 | Stack | 2 |
+| String Matching | 2 |
 | Binary Search | 1 |
-| String Matching | 1 |
 
 ## Revision Tracker
 
@@ -51,6 +51,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due today |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due today |
 | Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due today |
+| check_anagram_str | Strings | 0 | Not revised yet | 2026-08-02 | Due in 1 day(s) |
 | SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 1 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
@@ -79,6 +80,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [check_anagram_str](05_Strings/Easy/check_anagram_str.py) | Strings | Easy | String Matching, Hashing | 2026-08-01 |
 | [captilize_first_and_last_char](05_Strings/Medium/captilize_first_and_last_char.py) | Strings | Medium | String Matching, Stack | 2026-08-01 |
 | [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-31 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-31 |
@@ -88,4 +90,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-29 |
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-29 |
 | [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |
-| [Check_prime_num](01_Basics/Easy/Check_prime_num.py) | Basics | Easy | Math | 2026-07-26 |

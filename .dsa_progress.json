@@ -351,9 +351,9 @@
         "Sorting"
       ],
       "updated_at": "2026-07-31T17:53:48",
-      "revision_count": 0,
-      "revision_due": "2026-08-01",
-      "last_revised": null
+      "revision_count": 1,
+      "revision_due": "2026-08-04",
+      "last_revised": "2026-08-01"
     },
     {
       "problem": "captilize_first_and_last_char",

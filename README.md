@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 27 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-01 11:24 |
+| Last updated | 2026-08-01 11:25 |
 
 ## Topic Progress
 
@@ -48,12 +48,12 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due today |
 | SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 1 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | check_anagram_str | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
 | captilize_first_and_last_char | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
+| 88_merge_sort_array | Sorting | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 3 day(s) |
 | 75:Leetcode:Sort Colors | Sorting | 2 | 2026-07-31 | 2026-08-07 | Due in 6 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 13 day(s) |

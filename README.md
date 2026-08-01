@@ -51,10 +51,10 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due today |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due today |
 | Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due today |
-| captilize_first_and_last_char | Strings | 0 | Not revised yet | 2026-08-02 | Due in 1 day(s) |
 | SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 1 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
+| captilize_first_and_last_char | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 3 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 3 day(s) |
 | 75:Leetcode:Sort Colors | Sorting | 2 | 2026-07-31 | 2026-08-07 | Due in 6 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 13 day(s) |

@@ -1,3 +1,4 @@
+# Read input, solve the problem, and print the answer.
 def capitalize_first_last(sentence):
     # Write your code here
     captilize = sentence.split()

@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 27 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-01 11:03 |
+| Last updated | 2026-08-01 11:23 |
 
 ## Topic Progress
 
@@ -50,7 +50,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | --- | --- | ---: | --- | --- | --- |
 | 88_merge_sort_array | Sorting | 0 | Not revised yet | 2026-08-01 | Due today |
 | MoveZero_withoutSpace | Arrays | 2 | 2026-07-25 | 2026-08-01 | Due today |
-| Armstrong_check | Basics | 3 | Before tracking | 2026-08-01 | Due today |
 | SortArrayByParity | Arrays | 1 | 2026-07-30 | 2026-08-02 | Due in 1 day(s) |
 | Harshad_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
 | Factor_all_num | Basics | 3 | 2026-07-20 | 2026-08-03 | Due in 2 day(s) |
@@ -75,6 +74,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | selection_sort | Sorting | 4 | 2026-07-29 | 2026-08-28 | Due in 27 day(s) |
 | Bubble_sort | Sorting | 5 | 2026-07-30 | 2026-08-29 | Due in 28 day(s) |
 | Move_zeroUsingSpace | Arrays | 4 | 2026-07-31 | 2026-08-30 | Due in 29 day(s) |
+| Armstrong_check | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 30 day(s) |
 
 ## Recently Solved
 

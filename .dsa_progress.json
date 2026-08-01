@@ -353,6 +353,21 @@
       "revision_count": 0,
       "revision_due": "2026-08-01",
       "last_revised": null
+    },
+    {
+      "problem": "captilize_first_and_last_char",
+      "topic": "Strings",
+      "topic_dir": "05_Strings",
+      "difficulty": "Medium",
+      "path": "05_Strings/Medium/captilize_first_and_last_char.py",
+      "patterns": [
+        "String Matching",
+        "Stack"
+      ],
+      "updated_at": "2026-08-01T10:05:18",
+      "revision_count": 0,
+      "revision_due": "2026-08-02",
+      "last_revised": null
     }
   ]
 }

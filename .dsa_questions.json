@@ -1198,5 +1198,24 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "merge"
+  },
+  {
+    "id": "captilize-first-and-last-char",
+    "title": "Captilize First And Last Char",
+    "source_names": [
+      "captilize_first_and_last_char"
+    ],
+    "topic": "Strings",
+    "difficulty": "Medium",
+    "prompt": "Capitalize First and Last Character of Each Word\n\nDifficulty: Medium\n\nGiven a sentence consisting of words separated by a single space, capitalize the first and last character of every word.\n\nIf a word contains only one character, capitalize that character.\nReturn the modified sentence while preserving the order of the words.\nInput Format\nThe first line contains an integer T, the number of test cases.\nEach of the next T lines contains a sentence S.\nOutput Format\n\nFor each test case, print the modified sentence.",
+    "constraints": "1 \u2264 T \u2264 100\n1 \u2264 |S| \u2264 10^5\nThe sentence contains only English alphabets and spaces.\nWords are separated by a single space.\nThe sum of the lengths of all strings does not exceed 10^6.\nSample Input\n2\nHello bhai kaise ho\njava is fun\nSample Output\nHellO BhaI KaisE HO\nJavA IS FuN\nExplanation\nTest Case 1\nHello -> HellO\nbhai  -> BhaI\nkaise -> KaisE\nho    -> HO\nResult:\nHellO BhaI KaisE HO\nTest Case 2\njava -> JavA\nis   -> IS\nfun  -> FuN\nResult:\nJavA IS FuN",
+    "examples": [],
+    "edge_cases": [
+      "Empty input",
+      "One character",
+      "Repeated characters"
+    ],
+    "tests": [],
+    "auto_generated": false
   }
 ]

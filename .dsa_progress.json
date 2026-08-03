@@ -350,10 +350,10 @@
       "patterns": [
         "Sorting"
       ],
-      "updated_at": "2026-07-31T17:53:48",
-      "revision_count": 1,
-      "revision_due": "2026-08-04",
-      "last_revised": "2026-08-01"
+      "updated_at": "2026-08-03T15:29:17",
+      "revision_count": 2,
+      "revision_due": "2026-08-10",
+      "last_revised": "2026-08-03"
     },
     {
       "problem": "captilize_first_and_last_char",

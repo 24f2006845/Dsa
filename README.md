@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 27 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-03 15:29 |
+| Last updated | 2026-08-03 15:30 |
 
 ## Topic Progress
 
@@ -48,10 +48,10 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| check_anagram_str | Strings | 1 | 2026-08-01 | 2026-08-04 | Due in 1 day(s) |
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 1 day(s) |
 | 75:Leetcode:Sort Colors | Sorting | 2 | 2026-07-31 | 2026-08-07 | Due in 4 day(s) |
 | SortArrayByParity | Arrays | 2 | 2026-08-01 | 2026-08-08 | Due in 5 day(s) |
+| check_anagram_str | Strings | 2 | 2026-08-03 | 2026-08-10 | Due in 7 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
@@ -80,9 +80,9 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [check_anagram_str](05_Strings/Easy/check_anagram_str.py) | Strings | Easy | String Matching, Hashing | 2026-08-03 |
 | [captilize_first_and_last_char](05_Strings/Medium/captilize_first_and_last_char.py) | Strings | Medium | String Matching, Stack | 2026-08-03 |
 | [88_merge_sort_array](02_Sorting/Medium/88_merge_sort_array.py) | Sorting | Medium | Sorting | 2026-08-03 |
-| [check_anagram_str](05_Strings/Easy/check_anagram_str.py) | Strings | Easy | String Matching, Hashing | 2026-08-01 |
 | [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-07-31 |
 | [Move_zeroUsingSpace](03_Arrays/Easy/Move_zeroUsingSpace.py) | Arrays | Easy | Stack | 2026-07-31 |
 | [SortArrayByParity](03_Arrays/Easy/SortArrayByParity.py) | Arrays | Easy | Sorting, Math | 2026-07-30 |

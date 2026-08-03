@@ -53,13 +53,13 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | sum_of_digit | Basics | 3 | 2026-07-21 | 2026-08-04 | Due in 1 day(s) |
 | 75:Leetcode:Sort Colors | Sorting | 2 | 2026-07-31 | 2026-08-07 | Due in 4 day(s) |
 | SortArrayByParity | Arrays | 2 | 2026-08-01 | 2026-08-08 | Due in 5 day(s) |
-| 88_merge_sort_array | Sorting | 2 | 2026-08-03 | 2026-08-10 | Due in 7 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | reverseSubArray | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | factorial | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 11 day(s) |
 | MoveZero_withoutSpace | Arrays | 3 | 2026-08-01 | 2026-08-15 | Due in 12 day(s) |
+| 88_merge_sort_array | Sorting | 3 | 2026-08-03 | 2026-08-17 | Due in 14 day(s) |
 | Check_strong_num | Basics | 4 | Before tracking | 2026-08-17 | Due in 14 day(s) |
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 14 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 16 day(s) |

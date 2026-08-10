@@ -6,18 +6,18 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 28 |
+| Problems solved | 29 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-10 15:52 |
+| Last updated | 2026-08-10 17:58 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 8 | `[######--------------] 29%` |
-| Basics | 13 | `[#########-----------] 46%` |
-| Sorting | 5 | `[####----------------] 18%` |
+| Arrays | 9 | `[######--------------] 31%` |
+| Basics | 13 | `[#########-----------] 45%` |
+| Sorting | 5 | `[###-----------------] 17%` |
 | Strings | 2 | `[#-------------------] 7%` |
 
 ## Difficulty
@@ -26,16 +26,16 @@ Auto-updated by `upload.py`.
 | --- | ---: |
 | Easy | 22 |
 | Hard | 1 |
-| Medium | 5 |
+| Medium | 6 |
 
 ## Pattern Matching
 
 | Pattern | Problems |
 | --- | ---: |
 | Math | 11 |
+| Two Pointers | 7 |
 | Sorting | 6 |
-| Two Pointers | 6 |
-| Sliding Window | 4 |
+| Sliding Window | 5 |
 | General Problem Solving | 3 |
 | Hashing | 3 |
 | Stack | 2 |
@@ -48,6 +48,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
+| 209. Minimum Size Subarray Sum | Arrays | 0 | Not revised yet | 2026-08-11 | Due in 1 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
@@ -81,6 +82,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [209. Minimum Size Subarray Sum](03_Arrays/Medium/209_Minimum_Size_Subarray_Sum.py) | Arrays | Medium | Two Pointers, Sliding Window | 2026-08-10 |
 | [643. Maximum Average Subarray I](03_Arrays/Easy/643_Maximum_Average_Subarray_I.py) | Arrays | Easy | Two Pointers, Sliding Window | 2026-08-10 |
 | [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-08-10 |
 | [check_anagram_str](05_Strings/Easy/check_anagram_str.py) | Strings | Easy | String Matching, Hashing | 2026-08-03 |
@@ -90,4 +92,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [SortArrayByParity](03_Arrays/Easy/SortArrayByParity.py) | Arrays | Easy | Sorting, Math | 2026-07-30 |
 | [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-30 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-29 |
-| [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-29 |

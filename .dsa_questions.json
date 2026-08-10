@@ -1295,5 +1295,85 @@
     "auto_generated": false,
     "runner": "class_method",
     "method": "findMaxAverage"
+  },
+  {
+    "id": "209-minimum-size-subarray-sum",
+    "title": "209. Minimum Size Subarray Sum",
+    "source_names": [
+      "209. Minimum Size Subarray Sum"
+    ],
+    "topic": "Arrays",
+    "difficulty": "Medium",
+    "prompt": "Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.",
+    "constraints": "1 <= target <= 109\n1 <= nums.length <= 105\n1 <= nums[i] <= 104\nFollow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).",
+    "examples": [
+      {
+        "label": "Example 1",
+        "input": "target = 7, nums = [2,3,1,2,4,3]",
+        "output": "2",
+        "explanation": "The subarray [4,3] has the minimal length under the problem constraint."
+      },
+      {
+        "label": "Example 2",
+        "input": "target = 4, nums = [1,4,4]",
+        "output": "1"
+      },
+      {
+        "label": "Example 3",
+        "input": "target = 11, nums = [1,1,1,1,1,1,1,1]",
+        "output": "0"
+      }
+    ],
+    "edge_cases": [
+      "Empty or one-element input",
+      "Duplicates",
+      "First and last indices"
+    ],
+    "tests": [
+      {
+        "args": [
+          7,
+          [
+            2,
+            3,
+            1,
+            2,
+            4,
+            3
+          ]
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          4,
+          [
+            1,
+            4,
+            4
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          11,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "expected": 0
+      }
+    ],
+    "auto_generated": false,
+    "runner": "class_method",
+    "method": "minSubArrayLen"
   }
 ]

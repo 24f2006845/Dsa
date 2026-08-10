@@ -6,25 +6,25 @@ Auto-updated by `upload.py`.
 
 | Metric | Value |
 | --- | ---: |
-| Problems solved | 27 |
+| Problems solved | 28 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-10 15:50 |
+| Last updated | 2026-08-10 15:51 |
 
 ## Topic Progress
 
 | Topic | Solved | Progress |
 | --- | ---: | --- |
-| Arrays | 7 | `[#####---------------] 26%` |
-| Basics | 13 | `[##########----------] 48%` |
-| Sorting | 5 | `[####----------------] 19%` |
+| Arrays | 8 | `[######--------------] 29%` |
+| Basics | 13 | `[#########-----------] 46%` |
+| Sorting | 5 | `[####----------------] 18%` |
 | Strings | 2 | `[#-------------------] 7%` |
 
 ## Difficulty
 
 | Difficulty | Solved |
 | --- | ---: |
-| Easy | 21 |
+| Easy | 22 |
 | Hard | 1 |
 | Medium | 5 |
 
@@ -34,10 +34,10 @@ Auto-updated by `upload.py`.
 | --- | ---: |
 | Math | 11 |
 | Sorting | 6 |
-| Two Pointers | 5 |
+| Two Pointers | 6 |
+| Sliding Window | 4 |
 | General Problem Solving | 3 |
 | Hashing | 3 |
-| Sliding Window | 3 |
 | Stack | 2 |
 | String Matching | 2 |
 | Binary Search | 1 |
@@ -48,6 +48,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
+| 643. Maximum Average Subarray I | Arrays | 0 | Not revised yet | 2026-08-11 | Due in 1 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
@@ -80,6 +81,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Difficulty | Pattern(s) | Updated |
 | --- | --- | --- | --- | --- |
+| [643. Maximum Average Subarray I](03_Arrays/Easy/643_Maximum_Average_Subarray_I.py) | Arrays | Easy | Two Pointers, Sliding Window | 2026-08-10 |
 | [75:Leetcode:Sort Colors](02_Sorting/Medium/75_Leetcode_Sort_Colors.py) | Sorting | Medium | Binary Search, Sorting | 2026-08-10 |
 | [check_anagram_str](05_Strings/Easy/check_anagram_str.py) | Strings | Easy | String Matching, Hashing | 2026-08-03 |
 | [captilize_first_and_last_char](05_Strings/Medium/captilize_first_and_last_char.py) | Strings | Medium | String Matching, Stack | 2026-08-03 |
@@ -89,4 +91,3 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | [Bubble_sort](02_Sorting/Easy/Bubble_sort.py) | Sorting | Easy | Sorting | 2026-07-30 |
 | [Fibonaci_number](01_Basics/Easy/Fibonaci_number.py) | Basics | Easy | General Problem Solving | 2026-07-29 |
 | [selection_sort](02_Sorting/Easy/selection_sort.py) | Sorting | Easy | Sorting | 2026-07-29 |
-| [second_largest_element](03_Arrays/Easy/second_largest_element.py) | Arrays | Easy | Two Pointers, Hashing | 2026-07-26 |

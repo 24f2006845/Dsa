@@ -48,13 +48,13 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| 209. Minimum Size Subarray Sum | Arrays | 1 | 2026-08-10 | 2026-08-13 | Due in 3 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | reverseSubArray | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | factorial | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | MoveZero_withoutSpace | Arrays | 3 | 2026-08-01 | 2026-08-15 | Due in 5 day(s) |
+| 209. Minimum Size Subarray Sum | Arrays | 2 | 2026-08-10 | 2026-08-17 | Due in 7 day(s) |
 | 643. Maximum Average Subarray I | Arrays | 2 | 2026-08-10 | 2026-08-17 | Due in 7 day(s) |
 | check_anagram_str | Strings | 3 | 2026-08-03 | 2026-08-17 | Due in 7 day(s) |
 | captilize_first_and_last_char | Strings | 3 | 2026-08-03 | 2026-08-17 | Due in 7 day(s) |

@@ -62,7 +62,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 7 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 9 day(s) |
 | palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 10 day(s) |
-| 75:Leetcode:Sort Colors | Sorting | 3 | 2026-08-10 | 2026-08-24 | Due in 14 day(s) |
 | second_largest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |
 | Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |
 | Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |
@@ -75,6 +74,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Armstrong_check | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 21 day(s) |
 | Factor_all_num | Basics | 4 | 2026-08-01 | 2026-08-31 | Due in 21 day(s) |
 | sum_of_digit | Basics | 4 | 2026-08-03 | 2026-09-02 | Due in 23 day(s) |
+| 75:Leetcode:Sort Colors | Sorting | 4 | 2026-08-10 | 2026-09-09 | Due in 30 day(s) |
 
 ## Recently Solved
 

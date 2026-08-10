@@ -9,7 +9,7 @@ Auto-updated by `upload.py`.
 | Problems solved | 28 |
 | Topics touched | 4 |
 | Patterns identified | 9 |
-| Last updated | 2026-08-10 15:51 |
+| Last updated | 2026-08-10 15:52 |
 
 ## Topic Progress
 
@@ -48,7 +48,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| 643. Maximum Average Subarray I | Arrays | 0 | Not revised yet | 2026-08-11 | Due in 1 day(s) |
+| 643. Maximum Average Subarray I | Arrays | 1 | 2026-08-10 | 2026-08-13 | Due in 3 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |

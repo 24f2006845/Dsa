@@ -48,7 +48,6 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 
 | Problem | Topic | Revisions | Last Revised | Next Revision | Status |
 | --- | --- | ---: | --- | --- | --- |
-| SortArrayByParity | Arrays | 2 | 2026-08-01 | 2026-08-08 | Overdue by 2 day(s) |
 | leftRotatebyOne | Arrays | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | insertion_Sort | Sorting | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
 | Palindrome_string_check | Basics | 3 | 2026-07-31 | 2026-08-14 | Due in 4 day(s) |
@@ -62,6 +61,7 @@ Every saved problem appears here. This table is regenerated whenever you submit 
 | Count_digit | Basics | 4 | Before tracking | 2026-08-17 | Due in 7 day(s) |
 | automorphic_number | Basics | 4 | 2026-07-20 | 2026-08-19 | Due in 9 day(s) |
 | palindrome_check | Basics | 4 | 2026-07-21 | 2026-08-20 | Due in 10 day(s) |
+| SortArrayByParity | Arrays | 3 | 2026-08-10 | 2026-08-24 | Due in 14 day(s) |
 | second_largest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |
 | Check_prime_num | Basics | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |
 | Greatest_element | Arrays | 4 | 2026-07-26 | 2026-08-25 | Due in 15 day(s) |

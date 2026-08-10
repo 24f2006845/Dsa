@@ -336,10 +336,10 @@
         "Binary Search",
         "Sorting"
       ],
-      "updated_at": "2026-07-31T18:54:23",
-      "revision_count": 2,
-      "revision_due": "2026-08-07",
-      "last_revised": "2026-07-31"
+      "updated_at": "2026-08-10T15:50:39",
+      "revision_count": 3,
+      "revision_due": "2026-08-24",
+      "last_revised": "2026-08-10"
     },
     {
       "problem": "88_merge_sort_array",
